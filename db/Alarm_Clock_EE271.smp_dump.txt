@@ -1,0 +1,7 @@
+
+State Machine - |Alarm_Clock_EE271|currentState
+Name currentState.stopwatchState currentState.timerState currentState.alarmState currentState.000 
+currentState.000 0 0 0 0 
+currentState.alarmState 0 0 1 1 
+currentState.timerState 0 1 0 1 
+currentState.stopwatchState 1 0 0 1 
