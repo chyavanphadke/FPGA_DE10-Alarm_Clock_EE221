@@ -77,10 +77,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
 pushBtn[1]                   : A7        : input  : 2.5 V             :         : 7         : Y              
-led[0]                       : A8        : input  : 2.5 V             :         : 7         : Y              
-led[1]                       : A9        : input  : 2.5 V             :         : 7         : Y              
-led[2]                       : A10       : input  : 2.5 V             :         : 7         : Y              
-led[8]                       : A11       : input  : 2.5 V             :         : 7         : Y              
+led[0]                       : A8        : output : 2.5 V             :         : 7         : Y              
+led[1]                       : A9        : output : 2.5 V             :         : 7         : Y              
+led[2]                       : A10       : output : 2.5 V             :         : 7         : Y              
+led[8]                       : A11       : output : 2.5 V             :         : 7         : Y              
 switches[4]                  : A12       : input  : 2.5 V             :         : 7         : Y              
 switches[6]                  : A13       : input  : 2.5 V             :         : 7         : Y              
 switches[7]                  : A14       : input  : 2.5 V             :         : 7         : Y              
@@ -145,8 +145,8 @@ GND                          : B6        : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
 pushBtn[0]                   : B8        : input  : 2.5 V             :         : 7         : Y              
 GND                          : B9        : gnd    :                   :         :           :                
-led[3]                       : B10       : input  : 2.5 V             :         : 7         : Y              
-led[9]                       : B11       : input  : 2.5 V             :         : 7         : Y              
+led[3]                       : B10       : output : 2.5 V             :         : 7         : Y              
+led[9]                       : B11       : output : 2.5 V             :         : 7         : Y              
 switches[5]                  : B12       : input  : 2.5 V             :         : 7         : Y              
 GND                          : B13       : gnd    :                   :         :           :                
 switches[8]                  : B14       : input  : 2.5 V             :         : 7         : Y              
@@ -170,7 +170,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :      
 switches[0]                  : C10       : input  : 2.5 V             :         : 7         : Y              
 switches[1]                  : C11       : input  : 2.5 V             :         : 7         : Y              
 switches[3]                  : C12       : input  : 2.5 V             :         : 7         : Y              
-led[5]                       : C13       : input  : 2.5 V             :         : 7         : Y              
+led[5]                       : C13       : output : 2.5 V             :         : 7         : Y              
 seg0[0]                      : C14       : output : 2.5 V             :         : 7         : Y              
 seg0[2]                      : C15       : output : 2.5 V             :         : 7         : Y              
 seg0[3]                      : C16       : output : 2.5 V             :         : 7         : Y              
@@ -192,8 +192,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : D10       :        :                   :         : 8         :                
 GND                          : D11       : gnd    :                   :         :           :                
 switches[2]                  : D12       : input  : 2.5 V             :         : 7         : Y              
-led[4]                       : D13       : input  : 2.5 V             :         : 7         : Y              
-led[7]                       : D14       : input  : 2.5 V             :         : 7         : Y              
+led[4]                       : D13       : output : 2.5 V             :         : 7         : Y              
+led[7]                       : D14       : output : 2.5 V             :         : 7         : Y              
 seg0[7]                      : D15       : output : 2.5 V             :         : 7         : Y              
 GND                          : D16       : gnd    :                   :         :           :                
 seg0[5]                      : D17       : output : 2.5 V             :         : 7         : Y              
@@ -215,7 +215,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 7         :                
-led[6]                       : E14       : input  : 2.5 V             :         : 7         : Y              
+led[6]                       : E14       : output : 2.5 V             :         : 7         : Y              
 seg0[1]                      : E15       : output : 2.5 V             :         : 7         : Y              
 seg0[4]                      : E16       : output : 2.5 V             :         : 7         : Y              
 seg3[6]                      : E17       : output : 2.5 V             :         : 6         : Y              
