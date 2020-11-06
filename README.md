@@ -9,3 +9,8 @@ currentState:
 01 : Alarm
 10 : Timer
 11 : StopWatch
+
+
+Current Status of the code:
+
+* State Machine to count from 0 to 4 is completed.
