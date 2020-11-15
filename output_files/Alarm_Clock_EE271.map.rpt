@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Alarm_Clock_EE271
-Thu Nov 05 18:03:23 2020
+Sun Nov 15 01:17:46 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,13 +13,14 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Inverted Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
- 14. Analysis & Synthesis Suppressed Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,15 +47,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 05 18:03:23 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 15 01:17:46 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Alarm_Clock_EE271                           ;
 ; Top-level Entity Name              ; Alarm_Clock_EE271                           ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 74                                          ;
-;     Total combinational functions  ; 74                                          ;
-;     Dedicated logic registers      ; 53                                          ;
-; Total registers                    ; 53                                          ;
+; Total logic elements               ; 369                                         ;
+;     Total combinational functions  ; 369                                         ;
+;     Dedicated logic registers      ; 103                                         ;
+; Total registers                    ; 103                                         ;
 ; Total pins                         ; 71                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -168,13 +169,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
-; Alarm_Clock_EE271.v              ; yes             ; User Verilog HDL File  ; C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                    ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
+; Alarm_Clock_EE271.v              ; yes             ; User Verilog HDL File  ; C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -182,20 +183,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 74        ;
+; Estimated Total logic elements              ; 369       ;
 ;                                             ;           ;
-; Total combinational functions               ; 74        ;
+; Total combinational functions               ; 369       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 18        ;
-;     -- 3 input functions                    ; 2         ;
-;     -- <=2 input functions                  ; 54        ;
+;     -- 4 input functions                    ; 171       ;
+;     -- 3 input functions                    ; 76        ;
+;     -- <=2 input functions                  ; 122       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 26        ;
-;     -- arithmetic mode                      ; 48        ;
+;     -- normal mode                          ; 275       ;
+;     -- arithmetic mode                      ; 94        ;
 ;                                             ;           ;
-; Total registers                             ; 53        ;
-;     -- Dedicated logic registers            ; 53        ;
+; Total registers                             ; 103       ;
+;     -- Dedicated logic registers            ; 103       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 71        ;
@@ -203,9 +204,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 53        ;
-; Total fan-out                               ; 471       ;
-; Average fan-out                             ; 1.75      ;
+; Maximum fan-out                             ; 103       ;
+; Total fan-out                               ; 1646      ;
+; Average fan-out                             ; 2.68      ;
 +---------------------------------------------+-----------+
 
 
@@ -214,9 +215,60 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name       ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------------+--------------+
-; |Alarm_Clock_EE271         ; 74 (74)             ; 53 (53)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |Alarm_Clock_EE271  ; Alarm_Clock_EE271 ; work         ;
+; |Alarm_Clock_EE271         ; 369 (369)           ; 103 (103)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 71   ; 0            ; 0          ; |Alarm_Clock_EE271  ; Alarm_Clock_EE271 ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; seg0[0]$latch                                       ; WideOr66            ; yes                    ;
+; seg0[1]$latch                                       ; WideOr66            ; yes                    ;
+; seg0[2]$latch                                       ; WideOr66            ; yes                    ;
+; seg0[3]$latch                                       ; WideOr66            ; yes                    ;
+; seg0[4]$latch                                       ; WideOr66            ; yes                    ;
+; seg0[5]$latch                                       ; WideOr66            ; yes                    ;
+; seg0[6]$latch                                       ; WideOr66            ; yes                    ;
+; seg1[0]$latch                                       ; WideOr66            ; yes                    ;
+; seg1[1]$latch                                       ; WideOr66            ; yes                    ;
+; seg1[2]$latch                                       ; WideOr66            ; yes                    ;
+; seg1[3]$latch                                       ; WideOr66            ; yes                    ;
+; seg1[4]$latch                                       ; WideOr66            ; yes                    ;
+; seg1[5]$latch                                       ; WideOr66            ; yes                    ;
+; seg1[6]$latch                                       ; WideOr66            ; yes                    ;
+; seg2[0]$latch                                       ; WideOr37            ; yes                    ;
+; seg2[1]$latch                                       ; WideOr37            ; yes                    ;
+; seg2[2]$latch                                       ; WideOr37            ; yes                    ;
+; seg2[3]$latch                                       ; WideOr37            ; yes                    ;
+; seg2[4]$latch                                       ; WideOr37            ; yes                    ;
+; seg2[5]$latch                                       ; WideOr37            ; yes                    ;
+; seg2[6]$latch                                       ; WideOr37            ; yes                    ;
+; seg3[0]$latch                                       ; WideOr37            ; yes                    ;
+; seg3[1]$latch                                       ; WideOr37            ; yes                    ;
+; seg3[2]$latch                                       ; WideOr37            ; yes                    ;
+; seg3[3]$latch                                       ; WideOr37            ; yes                    ;
+; seg3[4]$latch                                       ; WideOr37            ; yes                    ;
+; seg3[5]$latch                                       ; WideOr37            ; yes                    ;
+; seg3[6]$latch                                       ; WideOr37            ; yes                    ;
+; seg4[0]$latch                                       ; WideOr8             ; yes                    ;
+; seg4[1]$latch                                       ; WideOr8             ; yes                    ;
+; seg4[2]$latch                                       ; WideOr8             ; yes                    ;
+; seg4[3]$latch                                       ; WideOr8             ; yes                    ;
+; seg4[4]$latch                                       ; WideOr8             ; yes                    ;
+; seg4[5]$latch                                       ; WideOr8             ; yes                    ;
+; seg4[6]$latch                                       ; WideOr8             ; yes                    ;
+; seg5[0]$latch                                       ; WideOr8             ; yes                    ;
+; seg5[2]$latch                                       ; WideOr8             ; yes                    ;
+; seg5[3]$latch                                       ; WideOr8             ; yes                    ;
+; seg5[4]$latch                                       ; WideOr8             ; yes                    ;
+; seg5[5]$latch                                       ; WideOr8             ; yes                    ;
+; seg5[6]$latch                                       ; WideOr8             ; yes                    ;
+; Number of user-specified and inferred latches = 41  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -224,12 +276,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 53    ;
-; Number of registers using Synchronous Clear  ; 50    ;
+; Total registers                              ; 103   ;
+; Number of registers using Synchronous Clear  ; 74    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 52    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 50    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -244,14 +296,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |Alarm_Clock_EE271|counter_not_pressed[1] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |Alarm_Clock_EE271|counter_pressed[24]    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |Alarm_Clock_EE271|counter_not_pressed[12] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |Alarm_Clock_EE271|counter_pressed[12]     ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|seconds[1]              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|minutes[5]              ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|hours[0]                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -260,22 +315,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 71                          ;
-; cycloneiii_ff         ; 53                          ;
+; cycloneiii_ff         ; 103                         ;
 ;     CLR               ; 2                           ;
 ;     CLR SCLR          ; 50                          ;
+;     ENA               ; 26                          ;
+;     ENA SCLR          ; 24                          ;
 ;     plain             ; 1                           ;
-; cycloneiii_lcell_comb ; 77                          ;
-;     arith             ; 48                          ;
-;         2 data inputs ; 48                          ;
-;     normal            ; 29                          ;
+; cycloneiii_lcell_comb ; 371                         ;
+;     arith             ; 94                          ;
+;         2 data inputs ; 94                          ;
+;     normal            ; 277                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 18                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 76                          ;
+;         4 data inputs ; 171                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.00                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 3.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -284,7 +341,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -294,100 +351,202 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 05 18:03:15 2020
+    Info: Processing started: Sun Nov 15 01:17:37 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alarm_Clock_EE271 -c Alarm_Clock_EE271
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alarm_clock_ee271.v
-    Info (12023): Found entity 1: Alarm_Clock_EE271 File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 1
+    Info (12023): Found entity 1: Alarm_Clock_EE271 File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 1
 Info (12127): Elaborating entity "Alarm_Clock_EE271" for the top level hierarchy
-Warning (10199): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(106): case item expression never matches the case expression File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 106
-Warning (10199): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(107): case item expression never matches the case expression File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 107
-Warning (10199): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(108): case item expression never matches the case expression File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 108
-Warning (10199): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(109): case item expression never matches the case expression File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 109
-Warning (10199): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(110): case item expression never matches the case expression File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 110
-Warning (10199): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(111): case item expression never matches the case expression File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 111
-Warning (10034): Output port "led[9..8]" at Alarm_Clock_EE271.v(21) has no driver File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
+Warning (10230): Verilog HDL assignment warning at Alarm_Clock_EE271.v(87): truncated value with size 32 to match size of target (8) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 87
+Warning (10230): Verilog HDL assignment warning at Alarm_Clock_EE271.v(92): truncated value with size 32 to match size of target (8) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 92
+Warning (10230): Verilog HDL assignment warning at Alarm_Clock_EE271.v(97): truncated value with size 32 to match size of target (8) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 97
+Warning (10230): Verilog HDL assignment warning at Alarm_Clock_EE271.v(102): truncated value with size 32 to match size of target (26) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 102
+Warning (10230): Verilog HDL assignment warning at Alarm_Clock_EE271.v(118): truncated value with size 32 to match size of target (8) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 118
+Warning (10230): Verilog HDL assignment warning at Alarm_Clock_EE271.v(130): truncated value with size 32 to match size of target (8) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 130
+Warning (10235): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(192): variable "hours" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 192
+Warning (10235): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(193): variable "seconds" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 193
+Warning (10235): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(194): variable "minutes" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 194
+Warning (10270): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(216): incomplete case statement has no default case item File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 216
+Warning (10270): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(244): incomplete case statement has no default case item File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 244
+Warning (10270): Verilog HDL Case Statement warning at Alarm_Clock_EE271.v(308): incomplete case statement has no default case item File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 308
+Warning (10240): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(215): inferring latch(es) for variable "seg5", which holds its previous value in one or more paths through the always construct File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Warning (10240): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(215): inferring latch(es) for variable "seg4", which holds its previous value in one or more paths through the always construct File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Warning (10240): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(215): inferring latch(es) for variable "seg3", which holds its previous value in one or more paths through the always construct File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Warning (10240): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(215): inferring latch(es) for variable "seg2", which holds its previous value in one or more paths through the always construct File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Warning (10240): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(215): inferring latch(es) for variable "seg1", which holds its previous value in one or more paths through the always construct File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Warning (10240): Verilog HDL Always Construct warning at Alarm_Clock_EE271.v(215): inferring latch(es) for variable "seg0", which holds its previous value in one or more paths through the always construct File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Warning (10034): Output port "led[9..8]" at Alarm_Clock_EE271.v(21) has no driver File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+Info (10041): Inferred latch for "seg0[0]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg0[1]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg0[2]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg0[3]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg0[4]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg0[5]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg0[6]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg0[7]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg1[0]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg1[1]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg1[2]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg1[3]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg1[4]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg1[5]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg1[6]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg1[7]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg2[0]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg2[1]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg2[2]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg2[3]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg2[4]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg2[5]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg2[6]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg2[7]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg3[0]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg3[1]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg3[2]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg3[3]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg3[4]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg3[5]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg3[6]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg3[7]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg4[0]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg4[1]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg4[2]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg4[3]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg4[4]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg4[5]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg4[6]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg4[7]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg5[0]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg5[1]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg5[2]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg5[3]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg5[4]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg5[5]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg5[6]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (10041): Inferred latch for "seg5[7]" at Alarm_Clock_EE271.v(215) File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "seg1[3]$latch" merged with LATCH primitive "seg1[0]$latch" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Info (13026): Duplicate LATCH primitive "seg3[3]$latch" merged with LATCH primitive "seg3[0]$latch" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Info (13026): Duplicate LATCH primitive "seg5[4]$latch" merged with LATCH primitive "seg5[0]$latch" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Info (13026): Duplicate LATCH primitive "seg5[3]$latch" merged with LATCH primitive "seg5[0]$latch" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+Warning (13012): Latch seg0[0]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg0[1]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg0[2]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[0] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg0[3]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg0[4]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg0[5]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg0[6]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg1[0]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg1[1]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg1[2]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg1[4]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg1[5]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg1[6]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal seconds[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg2[0]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg2[1]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg2[2]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[0] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg2[3]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg2[4]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg2[5]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg2[6]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg3[0]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg3[1]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg3[2]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg3[4]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg3[5]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg3[6]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal minutes[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg4[0]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg4[1]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg4[2]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[0] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg4[3]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg4[4]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[0] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg4[5]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg4[6]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg5[0]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg5[2]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg5[5]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[5] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
+Warning (13012): Latch seg5[6]$latch has unsafe behavior File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal hours[6] File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 64
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led[2]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
-    Warning (13410): Pin "led[3]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
-    Warning (13410): Pin "led[4]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
-    Warning (13410): Pin "led[5]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
-    Warning (13410): Pin "led[6]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
-    Warning (13410): Pin "led[7]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
-    Warning (13410): Pin "led[8]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
-    Warning (13410): Pin "led[9]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 21
-    Warning (13410): Pin "seg0[1]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 24
-    Warning (13410): Pin "seg0[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 24
-    Warning (13410): Pin "seg1[0]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 25
-    Warning (13410): Pin "seg1[1]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 25
-    Warning (13410): Pin "seg1[2]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 25
-    Warning (13410): Pin "seg1[3]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 25
-    Warning (13410): Pin "seg1[4]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 25
-    Warning (13410): Pin "seg1[5]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 25
-    Warning (13410): Pin "seg1[6]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 25
-    Warning (13410): Pin "seg1[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 25
-    Warning (13410): Pin "seg2[0]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 26
-    Warning (13410): Pin "seg2[1]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 26
-    Warning (13410): Pin "seg2[2]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 26
-    Warning (13410): Pin "seg2[3]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 26
-    Warning (13410): Pin "seg2[4]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 26
-    Warning (13410): Pin "seg2[5]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 26
-    Warning (13410): Pin "seg2[6]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 26
-    Warning (13410): Pin "seg2[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 26
-    Warning (13410): Pin "seg3[0]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 27
-    Warning (13410): Pin "seg3[1]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 27
-    Warning (13410): Pin "seg3[2]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 27
-    Warning (13410): Pin "seg3[3]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 27
-    Warning (13410): Pin "seg3[4]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 27
-    Warning (13410): Pin "seg3[5]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 27
-    Warning (13410): Pin "seg3[6]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 27
-    Warning (13410): Pin "seg3[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 27
-    Warning (13410): Pin "seg4[0]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 28
-    Warning (13410): Pin "seg4[1]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 28
-    Warning (13410): Pin "seg4[2]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 28
-    Warning (13410): Pin "seg4[3]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 28
-    Warning (13410): Pin "seg4[4]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 28
-    Warning (13410): Pin "seg4[5]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 28
-    Warning (13410): Pin "seg4[6]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 28
-    Warning (13410): Pin "seg4[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 28
-    Warning (13410): Pin "seg5[0]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 29
-    Warning (13410): Pin "seg5[1]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 29
-    Warning (13410): Pin "seg5[2]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 29
-    Warning (13410): Pin "seg5[3]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 29
-    Warning (13410): Pin "seg5[4]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 29
-    Warning (13410): Pin "seg5[5]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 29
-    Warning (13410): Pin "seg5[6]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 29
-    Warning (13410): Pin "seg5[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 29
+    Warning (13410): Pin "led[2]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+    Warning (13410): Pin "led[3]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+    Warning (13410): Pin "led[4]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+    Warning (13410): Pin "led[5]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+    Warning (13410): Pin "led[6]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+    Warning (13410): Pin "led[7]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+    Warning (13410): Pin "led[8]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+    Warning (13410): Pin "led[9]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 21
+    Warning (13410): Pin "seg0[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13410): Pin "seg1[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13410): Pin "seg2[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13410): Pin "seg3[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13410): Pin "seg4[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13410): Pin "seg5[1]" is stuck at GND File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
+    Warning (13410): Pin "seg5[7]" is stuck at VCC File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 215
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/chyav/Desktop/Alarm_Clock_EE221/output_files/Alarm_Clock_EE271.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/output_files/Alarm_Clock_EE271.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "switches[0]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[1]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[2]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[3]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[4]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[5]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[6]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[7]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[8]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-    Warning (15610): No output dependent on input pin "switches[9]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 12
-Info (21057): Implemented 145 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "switches[2]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 12
+    Warning (15610): No output dependent on input pin "switches[3]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 12
+    Warning (15610): No output dependent on input pin "switches[4]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 12
+    Warning (15610): No output dependent on input pin "switches[5]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 12
+    Warning (15610): No output dependent on input pin "switches[6]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 12
+    Warning (15610): No output dependent on input pin "switches[7]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 12
+    Warning (15610): No output dependent on input pin "switches[8]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 12
+    Warning (15610): No output dependent on input pin "switches[9]" File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 12
+Info (21057): Implemented 440 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 58 output pins
-    Info (21061): Implemented 74 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
-    Info: Peak virtual memory: 4771 megabytes
-    Info: Processing ended: Thu Nov 05 18:03:23 2020
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21061): Implemented 369 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 119 warnings
+    Info: Peak virtual memory: 4773 megabytes
+    Info: Processing ended: Sun Nov 15 01:17:46 2020
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/chyav/Desktop/Alarm_Clock_EE221/output_files/Alarm_Clock_EE271.map.smsg.
+The suppressed messages can be found in C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/output_files/Alarm_Clock_EE271.map.smsg.
 
 

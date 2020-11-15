@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(10M50DAF484) Path("C:/Users/chyav/Desktop/Alarm_Clock_EE221/output_files/") File("Alarm_Clock_EE271.sof") MfrSpec(OpMask(1));
+		Device PartName(10M50DAF484) Path("C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/output_files/") File("Alarm_Clock_EE271.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
