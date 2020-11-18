@@ -18,7 +18,7 @@ input [1:0] pushBtn;
 input clk;
 
 // LED's
-output [9:0] led;
+output reg [9:0] led;
 
 
 output reg [7:0] seg0;
@@ -61,7 +61,11 @@ reg [7:0] display_seconds = 0;
 reg [7:0] display_minutes = 0;
 //....................................................................................
 
+reg switch_old = 0;
+
 always @ (posedge clk) begin
+
+
 
 if(!pushBtn[1]) begin // Reset if reset pin is LOW
 	hours <= 0;
@@ -70,7 +74,7 @@ if(!pushBtn[1]) begin // Reset if reset pin is LOW
 end
 
 else begin
-	if((switches[0] == 1'b0) && (switches[1] == 1'b0)) begin
+	if((switches[9] == 1'b0)) begin
 		if(count == ( 26'b10111110101111000010000000 - 1'b1)) begin // 50 Mhz clock
 			count <= 0; // One Second
 			
@@ -102,37 +106,61 @@ else begin
 			count <= count + 1;
 		end
 	end
-end 
-end
 
-// Increment alarm clock - hours & minutes
+    // Clock Time modification
 
-always @ (negedge pushBtn[0]) begin
-	if((switches[0] == 1'b1) || (switches[1] == 1'b1)) begin
-		if((switches[0] == 1'b1) && (switches[1] == 1'b0)) begin // set hour
-			if(!pushBtn[0])begin
-					if(alarm_hours == 6'd23) begin
+
+    if(currentState == 0 && switch_old != pushBtn[0] && !pushBtn[0]) begin
+        if(switches[9] == 1'b1)
+            if(switches[0] == 0 && switches[1] == 1) begin
+                if(hours == 6'd23) begin
+						hours <= 0;
+					end
+					else begin
+						hours <= hours + 1;
+					end
+            end
+            else if(switches[0] == 1 && switches[1] == 0) begin
+                if(minutes == 6'd23) begin
+						minutes <= 0;
+					end
+					else begin
+						minutes <= minutes + 1;
+					end
+            end
+    end
+    else if(currentState == 1 && switch_old != pushBtn[0] && !pushBtn[0]) begin
+        if(switches[9] == 1'b1)
+            if(switches[0] == 0 && switches[1] == 1) begin
+                if(alarm_hours == 6'd23) begin
 						alarm_hours <= 0;
 					end
 					else begin
 						alarm_hours <= alarm_hours + 1;
 					end
-			end
-		end
-		
-		if((switches[0] == 1'b0) && (switches[1] == 1'b1)) begin // set minutes
-			if(!pushBtn[0])begin
-				if(!pushBtn[0]) begin
-					if(alarm_minutes == 6'd59) begin
+            end
+            else if(switches[0] == 1 && switches[1] == 0) begin
+                if(alarm_minutes == 6'd23) begin
 						alarm_minutes <= 0;
 					end
 					else begin
 						alarm_minutes <= alarm_minutes + 1;
 					end
-				end
-			end
+            end
+    end
+end
+
+switch_old  <= pushBtn[0];
+end
+
+// alarm clock
+always @ (posedge clk) begin
+		if((hours == alarm_hours) && (minutes == alarm_minutes)) begin
+			led[9] = 1;
 		end
-	end
+		else begin
+			led[9] = 0;
+	end	
 end
 
 //....................................................................................
@@ -161,7 +189,9 @@ begin
 
 		if(counter_pressed == 25'd2000000)
 			begin
-			currentState = currentState + 1'b1;
+			if (switches[9] == 1'b0) begin
+				currentState = currentState + 1'b1;
+				end
 			counter_pressed <= 25'b0;
 			button_state = 1'b1;
 			end
@@ -184,19 +214,18 @@ begin
 		end
 end
 
-assign led[7:0] = currentState[1:0];
 
 always @ (currentState) begin
 	case(currentState)
 		0: begin 
 			display_hours = hours;
-			display_seconds = seconds;
 			display_minutes = minutes;
+			display_seconds = seconds;
 			end
 		1: begin 
-			display_hours = 0;
+			display_hours = alarm_hours;
+			display_minutes = alarm_minutes;
 			display_seconds = 0;
-			display_minutes = 0;
 			end
 		2: begin 
 			display_hours = 0;

@@ -4,11 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "led[0]",
-					"strict" : false
-				},
-				{
-					"name" : "led[1]",
+					"name" : "led[9]",
 					"strict" : false
 				},
 				{
@@ -180,11 +176,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "pushBtn[1]",
-					"strict" : false
-				},
-				{
-					"name" : "pushBtn[0]",
+					"name" : "switches[1]",
 					"strict" : false
 				},
 				{
@@ -192,7 +184,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "switches[1]",
+					"name" : "pushBtn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pushBtn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[9]",
 					"strict" : false
 				}
 			]

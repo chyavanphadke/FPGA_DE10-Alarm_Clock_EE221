@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at Alarm_Clock_EE271.v(140): always construct contains both blocking and non-blocking assignments File: C:/Users/chyav/Desktop/Alarm_Clock_EE221-main/Alarm_Clock_EE271.v Line: 140
+Warning (10268): Verilog HDL information at Alarm_Clock_EE271.v(168): always construct contains both blocking and non-blocking assignments File: C:/Users/chyav/Desktop/cp/Alarm_Clock_EE221/Alarm_Clock_EE271.v Line: 168
