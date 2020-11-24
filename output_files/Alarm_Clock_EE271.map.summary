@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Nov 23 21:53:30 2020
+Analysis & Synthesis Status : Successful - Mon Nov 23 22:28:27 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Alarm_Clock_EE271
 Top-level Entity Name : Alarm_Clock_EE271
 Family : MAX 10
-Total logic elements : 539
-    Total combinational functions : 528
-    Dedicated logic registers : 180
-Total registers : 180
+Total logic elements : 548
+    Total combinational functions : 537
+    Dedicated logic registers : 181
+Total registers : 181
 Total pins : 74
 Total virtual pins : 0
 Total memory bits : 0

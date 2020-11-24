@@ -1,5 +1,5 @@
 Flow report for Alarm_Clock_EE271
-Mon Nov 23 21:53:59 2020
+Mon Nov 23 22:28:50 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 23 21:53:54 2020       ;
+; Flow Status                        ; Successful - Mon Nov 23 22:28:47 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Alarm_Clock_EE271                           ;
 ; Top-level Entity Name              ; Alarm_Clock_EE271                           ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 544 / 49,760 ( 1 % )                        ;
-;     Total combinational functions  ; 528 / 49,760 ( 1 % )                        ;
-;     Dedicated logic registers      ; 180 / 49,760 ( < 1 % )                      ;
-; Total registers                    ; 180                                         ;
+; Total logic elements               ; 549 / 49,760 ( 1 % )                        ;
+;     Total combinational functions  ; 537 / 49,760 ( 1 % )                        ;
+;     Dedicated logic registers      ; 181 / 49,760 ( < 1 % )                      ;
+; Total registers                    ; 181                                         ;
 ; Total pins                         ; 74 / 360 ( 21 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/23/2020 21:53:21 ;
+; Start date & time ; 11/23/2020 22:28:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Alarm_Clock_EE271   ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589199.160619720122348         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589199.160619929817824         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
@@ -93,11 +93,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4791 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:19     ; 1.1                     ; 5669 MB             ; 00:00:26                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4698 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.4                     ; 4839 MB             ; 00:00:04                           ;
-; Total                ; 00:00:35     ; --                      ; --                  ; 00:00:54                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4791 MB             ; 00:00:20                           ;
+; Fitter               ; 00:00:15     ; 1.2                     ; 5676 MB             ; 00:00:22                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4700 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.4                     ; 4840 MB             ; 00:00:04                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

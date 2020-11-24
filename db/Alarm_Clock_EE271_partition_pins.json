@@ -212,15 +212,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "segDecimalPoint",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "pushBtn[1]",
+					"name" : "switches[9]",
 					"strict" : false
 				},
 				{
-					"name" : "switches[9]",
+					"name" : "pushBtn[1]",
 					"strict" : false
 				},
 				{

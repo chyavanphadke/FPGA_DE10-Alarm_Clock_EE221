@@ -7,7 +7,8 @@ module Alarm_Clock_EE271 (
 	ps,
 	seg0, seg1, 
 	seg2, seg3, 
-	seg4, seg5
+	seg4, seg5,
+	segDecimalPoint
 );
 
 // Switches
@@ -28,8 +29,9 @@ output reg [7:0] seg0;
 output reg [7:0] seg1;
 output reg [7:0] seg2;
 output reg [7:0] seg3;
-output reg [7:0] seg4;
+output reg [6:0] seg4;
 output reg [7:0] seg5;
+output reg segDecimalPoint;
 
 reg [1:0] currentState;
 
@@ -49,7 +51,7 @@ initial begin
   seg1 = 8'b11_11_11_11;
   seg2 = 8'b11_11_11_11;
   seg3 = 8'b11_11_11_11;
-  seg4 = 8'b11_11_11_11;
+  seg4 = 7'b1_11_11_11;
   seg5 = 8'b11_11_11_11;
   alarmflag = 0;
 end
@@ -65,7 +67,7 @@ reg [7:0] alarm_minutes = 0; // alarm initially set at 1 minute.
 
 reg [7:0] timer_hours = 0;
 reg [7:0] timer_minutes = 0;
-reg [7:0] timer_seconds = 25'd15;
+reg [7:0] timer_seconds = 25'd10;
 
 reg [7:0] stopwatch_hours = 0;
 reg [7:0] stopwatch_minutes = 0;
@@ -81,22 +83,23 @@ reg switch_old = 0;
 always @ (posedge clk) begin
 
 
-if(!pushBtn[1]) begin // Reset if reset pin is LOW
+if(!pushBtn[1]) begin
 	hours <= 0;
 	minutes <= 0;
 	seconds <= 0;
 	
 	alarm_hours <= 0;
-	alarm_minutes <= 0; // alarm initially set at 1 minute.
+	alarm_minutes <= 0;
 
 	timer_hours <= 0;
 	timer_minutes <= 0;
-	timer_seconds <= 0;
+	timer_seconds <= 25'd10;
 
 	stopwatch_hours <= 0;
 	stopwatch_minutes <= 0;
 	stopwatch_seconds <= 0;
-	alarmflag = 1;
+	alarmflag = 0;
+	segDecimalPoint = 0;
 end
 
 else begin
@@ -182,6 +185,11 @@ else begin
 		end
 		else begin
 			count <= count + 1;
+			if(count > 26'b01011111010111100001000000) begin
+				segDecimalPoint <= 1; end
+			else begin
+				segDecimalPoint <= 0;
+			end
 		end
 	end
 
@@ -344,31 +352,31 @@ end
 // 7 seg
 always @ (display_hours, display_minutes, display_seconds) begin
   case(display_hours)
-		0: {seg5,seg4} =  {8'b11_00_00_00,8'b11_00_00_00};
-		1: {seg5,seg4} =  {8'b11_00_00_00,8'b11_11_10_01};
-		2: {seg5,seg4} =  {8'b11_00_00_00,8'b10_10_01_00};
-		3: {seg5,seg4} =  {8'b11_00_00_00,8'b10_11_00_00};
-		4: {seg5,seg4} =  {8'b11_00_00_00,8'b10_01_10_01};
-		5: {seg5,seg4} =  {8'b11_00_00_00,8'b10_01_00_10};
-		6: {seg5,seg4} =  {8'b11_00_00_00,8'b10_00_00_10};
-		7: {seg5,seg4} =  {8'b11_00_00_00,8'b11_11_10_00};
-		8: {seg5,seg4} =  {8'b11_00_00_00,8'b10_00_00_00};
-		9: {seg5,seg4} =  {8'b11_00_00_00,8'b10_01_00_00};
-		10: {seg5,seg4} = {8'b11_11_10_01,8'b11_00_00_00};
-		11: {seg5,seg4} = {8'b11_11_10_01,8'b11_11_10_01};
-		12: {seg5,seg4} = {8'b11_11_10_01,8'b10_10_01_00};
-		13: {seg5,seg4} = {8'b11_11_10_01,8'b10_11_00_00};
-		14: {seg5,seg4} = {8'b11_11_10_01,8'b10_01_10_01};
-		15: {seg5,seg4} = {8'b11_11_10_01,8'b10_01_00_10};
-		16: {seg5,seg4} = {8'b11_11_10_01,8'b10_00_00_10};
-		17: {seg5,seg4} = {8'b11_11_10_01,8'b11_11_10_00};
-		18: {seg5,seg4} = {8'b11_11_10_01,8'b10_00_00_00};
-		19: {seg5,seg4} = {8'b11_11_10_01,8'b10_01_00_00};
-		20: {seg5,seg4} = {8'b10_10_01_00,8'b11_00_00_00};
-		21: {seg5,seg4} = {8'b10_10_01_00,8'b11_11_10_01};
-		22: {seg5,seg4} = {8'b10_10_01_00,8'b10_10_01_00};
-		23: {seg5,seg4} = {8'b10_10_01_00,8'b10_11_00_00};
-		24: {seg5,seg4} = {8'b10_10_01_00,8'b10_01_10_01};
+		0: {seg5,seg4} =  {8'b11_00_00_00,7'b1_00_00_00};
+		1: {seg5,seg4} =  {8'b11_00_00_00,7'b1_11_10_01};
+		2: {seg5,seg4} =  {8'b11_00_00_00,7'b0_10_01_00};
+		3: {seg5,seg4} =  {8'b11_00_00_00,7'b0_11_00_00};
+		4: {seg5,seg4} =  {8'b11_00_00_00,7'b0_01_10_01};
+		5: {seg5,seg4} =  {8'b11_00_00_00,7'b0_01_00_10};
+		6: {seg5,seg4} =  {8'b11_00_00_00,7'b0_00_00_10};
+		7: {seg5,seg4} =  {8'b11_00_00_00,7'b1_11_10_00};
+		8: {seg5,seg4} =  {8'b11_00_00_00,7'b0_00_00_00};
+		9: {seg5,seg4} =  {8'b11_00_00_00,7'b0_01_00_00};
+		10: {seg5,seg4} = {8'b11_11_10_01,7'b1_00_00_00};
+		11: {seg5,seg4} = {8'b11_11_10_01,7'b1_11_10_01};
+		12: {seg5,seg4} = {8'b11_11_10_01,7'b0_10_01_00};
+		13: {seg5,seg4} = {8'b11_11_10_01,7'b0_11_00_00};
+		14: {seg5,seg4} = {8'b11_11_10_01,7'b0_01_10_01};
+		15: {seg5,seg4} = {8'b11_11_10_01,7'b0_01_00_10};
+		16: {seg5,seg4} = {8'b11_11_10_01,7'b0_00_00_10};
+		17: {seg5,seg4} = {8'b11_11_10_01,7'b1_11_10_00};
+		18: {seg5,seg4} = {8'b11_11_10_01,7'b0_00_00_00};
+		19: {seg5,seg4} = {8'b11_11_10_01,7'b0_01_00_00};
+		20: {seg5,seg4} = {8'b10_10_01_00,7'b1_00_00_00};
+		21: {seg5,seg4} = {8'b10_10_01_00,7'b1_11_10_01};
+		22: {seg5,seg4} = {8'b10_10_01_00,7'b0_10_01_00};
+		23: {seg5,seg4} = {8'b10_10_01_00,7'b0_11_00_00};
+		24: {seg5,seg4} = {8'b10_10_01_00,7'b0_01_10_01};
   endcase
 
   case(display_minutes)
