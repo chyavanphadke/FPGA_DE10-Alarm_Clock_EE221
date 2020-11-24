@@ -1,5 +1,8 @@
 # Alarm_Clock_EE221
 
+**Arduino Code is in Arduino Foler**
+
+
 Schematics:
 
 <p align="left">
