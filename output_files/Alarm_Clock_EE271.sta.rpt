@@ -1,5 +1,5 @@
 Timing Analyzer report for Alarm_Clock_EE271
-Tue Nov 24 00:09:36 2020
+Tue Nov 24 00:22:54 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -98,8 +98,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;  12.5%      ;
-;     Processor 3            ;  12.4%      ;
-;     Processor 4            ;  12.3%      ;
+;     Processor 3            ;  12.2%      ;
+;     Processor 4            ;  12.2%      ;
 +----------------------------+-------------+
 
 
@@ -118,8 +118,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-----------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
 +------------+-----------------+-----------------+------+
-; 57.77 MHz  ; 57.77 MHz       ; currentState[0] ;      ;
-; 162.97 MHz ; 162.97 MHz      ; clk             ;      ;
+; 67.31 MHz  ; 67.31 MHz       ; currentState[0] ;      ;
+; 155.23 MHz ; 155.23 MHz      ; clk             ;      ;
 +------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -129,8 +129,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+---------+---------------+
 ; Clock           ; Slack   ; End Point TNS ;
 +-----------------+---------+---------------+
-; currentState[0] ; -11.543 ; -350.891      ;
-; clk             ; -5.136  ; -684.144      ;
+; currentState[0] ; -11.087 ; -366.117      ;
+; clk             ; -5.442  ; -667.524      ;
 +-----------------+---------+---------------+
 
 
@@ -139,8 +139,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; clk             ; 0.341 ; 0.000         ;
-; currentState[0] ; 0.878 ; 0.000         ;
+; clk             ; 0.348 ; 0.000         ;
+; currentState[0] ; 0.444 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -162,7 +162,7 @@ No paths to report.
 ; Clock           ; Slack  ; End Point TNS          ;
 +-----------------+--------+------------------------+
 ; clk             ; -3.000 ; -256.943               ;
-; currentState[0] ; -2.250 ; -280.825               ;
+; currentState[0] ; -1.713 ; -218.459               ;
 +-----------------+--------+------------------------+
 
 
@@ -172,14 +172,14 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+-------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                     ;
-+------------+-----------------+-----------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
-+------------+-----------------+-----------------+------+
-; 61.06 MHz  ; 61.06 MHz       ; currentState[0] ;      ;
-; 174.46 MHz ; 174.46 MHz      ; clk             ;      ;
-+------------+-----------------+-----------------+------+
++------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                    ;
++-----------+-----------------+-----------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name      ; Note ;
++-----------+-----------------+-----------------+------+
+; 70.9 MHz  ; 70.9 MHz        ; currentState[0] ;      ;
+; 167.9 MHz ; 167.9 MHz       ; clk             ;      ;
++-----------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -188,8 +188,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+---------+---------------+
 ; Clock           ; Slack   ; End Point TNS ;
 +-----------------+---------+---------------+
-; currentState[0] ; -10.752 ; -327.647      ;
-; clk             ; -4.732  ; -618.952      ;
+; currentState[0] ; -10.373 ; -341.419      ;
+; clk             ; -4.956  ; -604.937      ;
 +-----------------+---------+---------------+
 
 
@@ -198,8 +198,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; clk             ; 0.306 ; 0.000         ;
-; currentState[0] ; 0.792 ; 0.000         ;
+; clk             ; 0.311 ; 0.000         ;
+; currentState[0] ; 0.478 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -221,7 +221,7 @@ No paths to report.
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
 ; clk             ; -3.000 ; -256.943              ;
-; currentState[0] ; -2.103 ; -248.964              ;
+; currentState[0] ; -1.529 ; -189.397              ;
 +-----------------+--------+-----------------------+
 
 
@@ -236,19 +236,19 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; currentState[0] ; -4.758 ; -147.465      ;
-; clk             ; -1.745 ; -200.282      ;
+; currentState[0] ; -4.896 ; -156.942      ;
+; clk             ; -1.875 ; -193.662      ;
 +-----------------+--------+---------------+
 
 
-+-----------------------------------------+
-; Fast 1200mV 0C Model Hold Summary       ;
-+-----------------+-------+---------------+
-; Clock           ; Slack ; End Point TNS ;
-+-----------------+-------+---------------+
-; clk             ; 0.148 ; 0.000         ;
-; currentState[0] ; 0.230 ; 0.000         ;
-+-----------------+-------+---------------+
++------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary        ;
++-----------------+--------+---------------+
+; Clock           ; Slack  ; End Point TNS ;
++-----------------+--------+---------------+
+; currentState[0] ; -0.017 ; -0.017        ;
+; clk             ; 0.152  ; 0.000         ;
++-----------------+--------+---------------+
 
 
 -----------------------------------------
@@ -268,8 +268,8 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; clk             ; -3.000 ; -187.353              ;
-; currentState[0] ; -0.718 ; -53.266               ;
+; clk             ; -3.000 ; -187.136              ;
+; currentState[0] ; -0.563 ; -35.389               ;
 +-----------------+--------+-----------------------+
 
 
@@ -279,18 +279,18 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                             ;
-+------------------+-----------+-------+----------+---------+---------------------+
-; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -11.543   ; 0.148 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -5.136    ; 0.148 ; N/A      ; N/A     ; -3.000              ;
-;  currentState[0] ; -11.543   ; 0.230 ; N/A      ; N/A     ; -2.250              ;
-; Design-wide TNS  ; -1035.035 ; 0.0   ; 0.0      ; 0.0     ; -537.768            ;
-;  clk             ; -684.144  ; 0.000 ; N/A      ; N/A     ; -256.943            ;
-;  currentState[0] ; -350.891  ; 0.000 ; N/A      ; N/A     ; -280.825            ;
-+------------------+-----------+-------+----------+---------+---------------------+
++----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                              ;
++------------------+-----------+--------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -11.087   ; -0.017 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -5.442    ; 0.152  ; N/A      ; N/A     ; -3.000              ;
+;  currentState[0] ; -11.087   ; -0.017 ; N/A      ; N/A     ; -1.713              ;
+; Design-wide TNS  ; -1033.641 ; -0.017 ; 0.0      ; 0.0     ; -475.402            ;
+;  clk             ; -667.524  ; 0.000  ; N/A      ; N/A     ; -256.943            ;
+;  currentState[0] ; -366.117  ; -0.017 ; N/A      ; N/A     ; -218.459            ;
++------------------+-----------+--------+----------+---------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -378,8 +378,8 @@ No synchronizer chains to report.
 ; switches[7]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switches[8]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switches[1]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; switches[9]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switches[0]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; switches[9]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clk                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; pushBtn[1]          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; pushBtn[0]          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -616,8 +616,8 @@ No synchronizer chains to report.
 +-----------------+-----------------+----------+----------+----------+----------+
 ; clk             ; clk             ; 7657     ; 0        ; 0        ; 0        ;
 ; currentState[0] ; clk             ; 125      ; 125      ; 0        ; 0        ;
-; clk             ; currentState[0] ; 3420     ; 0        ; 1718     ; 0        ;
-; currentState[0] ; currentState[0] ; 900      ; 900      ; 418      ; 418      ;
+; clk             ; currentState[0] ; 3194     ; 0        ; 1546     ; 0        ;
+; currentState[0] ; currentState[0] ; 1046     ; 1046     ; 580      ; 580      ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -629,8 +629,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------+-----------------+----------+----------+----------+----------+
 ; clk             ; clk             ; 7657     ; 0        ; 0        ; 0        ;
 ; currentState[0] ; clk             ; 125      ; 125      ; 0        ; 0        ;
-; clk             ; currentState[0] ; 3420     ; 0        ; 1718     ; 0        ;
-; currentState[0] ; currentState[0] ; 900      ; 900      ; 418      ; 418      ;
+; clk             ; currentState[0] ; 3194     ; 0        ; 1546     ; 0        ;
+; currentState[0] ; currentState[0] ; 1046     ; 1046     ; 580      ; 580      ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -655,9 +655,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 513   ; 513  ;
+; Unconstrained Input Port Paths  ; 514   ; 514  ;
 ; Unconstrained Output Ports      ; 57    ; 57   ;
-; Unconstrained Output Port Paths ; 59    ; 59   ;
+; Unconstrained Output Port Paths ; 64    ; 64   ;
 +---------------------------------+-------+------+
 
 
@@ -833,7 +833,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 24 00:09:33 2020
+    Info: Processing started: Tue Nov 24 00:22:51 2020
 Info: Command: quartus_sta Alarm_Clock_EE271 -c Alarm_Clock_EE271
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -847,216 +847,216 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name currentState[0] currentState[0]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datab  to: combout
-    Info (332098): Cell: Mux0~1  from: datab  to: combout
-    Info (332098): Cell: Mux0~1  from: datad  to: combout
+    Info (332098): Cell: Mux0~0  from: datad  to: combout
+    Info (332098): Cell: Mux0~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~1  from: datac  to: combout
     Info (332098): Cell: Mux10~1  from: dataa  to: combout
-    Info (332098): Cell: Mux12~1  from: dataa  to: combout
+    Info (332098): Cell: Mux10~1  from: datab  to: combout
+    Info (332098): Cell: Mux12~0  from: datac  to: combout
     Info (332098): Cell: Mux13~1  from: dataa  to: combout
-    Info (332098): Cell: Mux14~1  from: dataa  to: combout
-    Info (332098): Cell: Mux16~0  from: datab  to: combout
-    Info (332098): Cell: Mux16~1  from: dataa  to: combout
-    Info (332098): Cell: Mux16~1  from: datab  to: combout
-    Info (332098): Cell: Mux17~0  from: datac  to: combout
-    Info (332098): Cell: Mux17~1  from: datad  to: combout
+    Info (332098): Cell: Mux16~0  from: dataa  to: combout
+    Info (332098): Cell: Mux16~1  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datad  to: combout
+    Info (332098): Cell: Mux17~0  from: dataa  to: combout
+    Info (332098): Cell: Mux17~1  from: datab  to: combout
     Info (332098): Cell: Mux18~0  from: datab  to: combout
-    Info (332098): Cell: Mux18~1  from: datab  to: combout
+    Info (332098): Cell: Mux18~1  from: datac  to: combout
     Info (332098): Cell: Mux18~1  from: datad  to: combout
-    Info (332098): Cell: Mux19~0  from: datad  to: combout
+    Info (332098): Cell: Mux19~0  from: dataa  to: combout
     Info (332098): Cell: Mux19~1  from: datad  to: combout
     Info (332098): Cell: Mux1~0  from: datac  to: combout
-    Info (332098): Cell: Mux1~1  from: datac  to: combout
-    Info (332098): Cell: Mux20~0  from: datac  to: combout
-    Info (332098): Cell: Mux20~1  from: datab  to: combout
-    Info (332098): Cell: Mux20~1  from: datad  to: combout
+    Info (332098): Cell: Mux1~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~0  from: datab  to: combout
+    Info (332098): Cell: Mux20~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: datac  to: combout
     Info (332098): Cell: Mux21~0  from: datab  to: combout
-    Info (332098): Cell: Mux21~1  from: dataa  to: combout
+    Info (332098): Cell: Mux21~1  from: datac  to: combout
     Info (332098): Cell: Mux22~0  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: datad  to: combout
+    Info (332098): Cell: Mux22~1  from: dataa  to: combout
+    Info (332098): Cell: Mux22~1  from: datac  to: combout
     Info (332098): Cell: Mux23~0  from: datac  to: combout
-    Info (332098): Cell: Mux23~1  from: datad  to: combout
-    Info (332098): Cell: Mux2~0  from: datab  to: combout
-    Info (332098): Cell: Mux2~1  from: datab  to: combout
+    Info (332098): Cell: Mux23~1  from: datab  to: combout
+    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux2~1  from: dataa  to: combout
     Info (332098): Cell: Mux2~1  from: datac  to: combout
     Info (332098): Cell: Mux3~0  from: datac  to: combout
-    Info (332098): Cell: Mux3~1  from: datac  to: combout
-    Info (332098): Cell: Mux4~0  from: datab  to: combout
-    Info (332098): Cell: Mux4~1  from: datab  to: combout
+    Info (332098): Cell: Mux3~1  from: datad  to: combout
+    Info (332098): Cell: Mux4~0  from: datac  to: combout
+    Info (332098): Cell: Mux4~1  from: datac  to: combout
     Info (332098): Cell: Mux4~1  from: datad  to: combout
     Info (332098): Cell: Mux5~0  from: dataa  to: combout
-    Info (332098): Cell: Mux5~1  from: datad  to: combout
-    Info (332098): Cell: Mux6~0  from: datab  to: combout
-    Info (332098): Cell: Mux6~1  from: datac  to: combout
+    Info (332098): Cell: Mux5~1  from: datab  to: combout
+    Info (332098): Cell: Mux6~0  from: datad  to: combout
+    Info (332098): Cell: Mux6~1  from: datab  to: combout
     Info (332098): Cell: Mux6~1  from: datad  to: combout
-    Info (332098): Cell: Mux7~0  from: datac  to: combout
-    Info (332098): Cell: Mux7~1  from: dataa  to: combout
-    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
-    Info (332098): Cell: WideOr80~2  from: dataa  to: combout
+    Info (332098): Cell: Mux7~0  from: datad  to: combout
+    Info (332098): Cell: Mux7~1  from: datad  to: combout
+    Info (332098): Cell: WideOr80~1  from: datad  to: combout
+    Info (332098): Cell: WideOr80~2  from: datab  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -11.543
+Info (332146): Worst-case setup slack is -11.087
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.543            -350.891 currentState[0] 
-    Info (332119):    -5.136            -684.144 clk 
-Info (332146): Worst-case hold slack is 0.341
+    Info (332119):   -11.087            -366.117 currentState[0] 
+    Info (332119):    -5.442            -667.524 clk 
+Info (332146): Worst-case hold slack is 0.348
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.341               0.000 clk 
-    Info (332119):     0.878               0.000 currentState[0] 
+    Info (332119):     0.348               0.000 clk 
+    Info (332119):     0.444               0.000 currentState[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000            -256.943 clk 
-    Info (332119):    -2.250            -280.825 currentState[0] 
+    Info (332119):    -1.713            -218.459 currentState[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datab  to: combout
-    Info (332098): Cell: Mux0~1  from: datab  to: combout
-    Info (332098): Cell: Mux0~1  from: datad  to: combout
+    Info (332098): Cell: Mux0~0  from: datad  to: combout
+    Info (332098): Cell: Mux0~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~1  from: datac  to: combout
     Info (332098): Cell: Mux10~1  from: dataa  to: combout
-    Info (332098): Cell: Mux12~1  from: dataa  to: combout
+    Info (332098): Cell: Mux10~1  from: datab  to: combout
+    Info (332098): Cell: Mux12~0  from: datac  to: combout
     Info (332098): Cell: Mux13~1  from: dataa  to: combout
-    Info (332098): Cell: Mux14~1  from: dataa  to: combout
-    Info (332098): Cell: Mux16~0  from: datab  to: combout
-    Info (332098): Cell: Mux16~1  from: dataa  to: combout
-    Info (332098): Cell: Mux16~1  from: datab  to: combout
-    Info (332098): Cell: Mux17~0  from: datac  to: combout
-    Info (332098): Cell: Mux17~1  from: datad  to: combout
+    Info (332098): Cell: Mux16~0  from: dataa  to: combout
+    Info (332098): Cell: Mux16~1  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datad  to: combout
+    Info (332098): Cell: Mux17~0  from: dataa  to: combout
+    Info (332098): Cell: Mux17~1  from: datab  to: combout
     Info (332098): Cell: Mux18~0  from: datab  to: combout
-    Info (332098): Cell: Mux18~1  from: datab  to: combout
+    Info (332098): Cell: Mux18~1  from: datac  to: combout
     Info (332098): Cell: Mux18~1  from: datad  to: combout
-    Info (332098): Cell: Mux19~0  from: datad  to: combout
+    Info (332098): Cell: Mux19~0  from: dataa  to: combout
     Info (332098): Cell: Mux19~1  from: datad  to: combout
     Info (332098): Cell: Mux1~0  from: datac  to: combout
-    Info (332098): Cell: Mux1~1  from: datac  to: combout
-    Info (332098): Cell: Mux20~0  from: datac  to: combout
-    Info (332098): Cell: Mux20~1  from: datab  to: combout
-    Info (332098): Cell: Mux20~1  from: datad  to: combout
+    Info (332098): Cell: Mux1~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~0  from: datab  to: combout
+    Info (332098): Cell: Mux20~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: datac  to: combout
     Info (332098): Cell: Mux21~0  from: datab  to: combout
-    Info (332098): Cell: Mux21~1  from: dataa  to: combout
+    Info (332098): Cell: Mux21~1  from: datac  to: combout
     Info (332098): Cell: Mux22~0  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: datad  to: combout
+    Info (332098): Cell: Mux22~1  from: dataa  to: combout
+    Info (332098): Cell: Mux22~1  from: datac  to: combout
     Info (332098): Cell: Mux23~0  from: datac  to: combout
-    Info (332098): Cell: Mux23~1  from: datad  to: combout
-    Info (332098): Cell: Mux2~0  from: datab  to: combout
-    Info (332098): Cell: Mux2~1  from: datab  to: combout
+    Info (332098): Cell: Mux23~1  from: datab  to: combout
+    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux2~1  from: dataa  to: combout
     Info (332098): Cell: Mux2~1  from: datac  to: combout
     Info (332098): Cell: Mux3~0  from: datac  to: combout
-    Info (332098): Cell: Mux3~1  from: datac  to: combout
-    Info (332098): Cell: Mux4~0  from: datab  to: combout
-    Info (332098): Cell: Mux4~1  from: datab  to: combout
+    Info (332098): Cell: Mux3~1  from: datad  to: combout
+    Info (332098): Cell: Mux4~0  from: datac  to: combout
+    Info (332098): Cell: Mux4~1  from: datac  to: combout
     Info (332098): Cell: Mux4~1  from: datad  to: combout
     Info (332098): Cell: Mux5~0  from: dataa  to: combout
-    Info (332098): Cell: Mux5~1  from: datad  to: combout
-    Info (332098): Cell: Mux6~0  from: datab  to: combout
-    Info (332098): Cell: Mux6~1  from: datac  to: combout
+    Info (332098): Cell: Mux5~1  from: datab  to: combout
+    Info (332098): Cell: Mux6~0  from: datad  to: combout
+    Info (332098): Cell: Mux6~1  from: datab  to: combout
     Info (332098): Cell: Mux6~1  from: datad  to: combout
-    Info (332098): Cell: Mux7~0  from: datac  to: combout
-    Info (332098): Cell: Mux7~1  from: dataa  to: combout
-    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
-    Info (332098): Cell: WideOr80~2  from: dataa  to: combout
+    Info (332098): Cell: Mux7~0  from: datad  to: combout
+    Info (332098): Cell: Mux7~1  from: datad  to: combout
+    Info (332098): Cell: WideOr80~1  from: datad  to: combout
+    Info (332098): Cell: WideOr80~2  from: datab  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.752
+Info (332146): Worst-case setup slack is -10.373
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.752            -327.647 currentState[0] 
-    Info (332119):    -4.732            -618.952 clk 
-Info (332146): Worst-case hold slack is 0.306
+    Info (332119):   -10.373            -341.419 currentState[0] 
+    Info (332119):    -4.956            -604.937 clk 
+Info (332146): Worst-case hold slack is 0.311
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.306               0.000 clk 
-    Info (332119):     0.792               0.000 currentState[0] 
+    Info (332119):     0.311               0.000 clk 
+    Info (332119):     0.478               0.000 currentState[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -3.000            -256.943 clk 
-    Info (332119):    -2.103            -248.964 currentState[0] 
+    Info (332119):    -1.529            -189.397 currentState[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datab  to: combout
-    Info (332098): Cell: Mux0~1  from: datab  to: combout
-    Info (332098): Cell: Mux0~1  from: datad  to: combout
+    Info (332098): Cell: Mux0~0  from: datad  to: combout
+    Info (332098): Cell: Mux0~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~1  from: datac  to: combout
     Info (332098): Cell: Mux10~1  from: dataa  to: combout
-    Info (332098): Cell: Mux12~1  from: dataa  to: combout
+    Info (332098): Cell: Mux10~1  from: datab  to: combout
+    Info (332098): Cell: Mux12~0  from: datac  to: combout
     Info (332098): Cell: Mux13~1  from: dataa  to: combout
-    Info (332098): Cell: Mux14~1  from: dataa  to: combout
-    Info (332098): Cell: Mux16~0  from: datab  to: combout
-    Info (332098): Cell: Mux16~1  from: dataa  to: combout
-    Info (332098): Cell: Mux16~1  from: datab  to: combout
-    Info (332098): Cell: Mux17~0  from: datac  to: combout
-    Info (332098): Cell: Mux17~1  from: datad  to: combout
+    Info (332098): Cell: Mux16~0  from: dataa  to: combout
+    Info (332098): Cell: Mux16~1  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datad  to: combout
+    Info (332098): Cell: Mux17~0  from: dataa  to: combout
+    Info (332098): Cell: Mux17~1  from: datab  to: combout
     Info (332098): Cell: Mux18~0  from: datab  to: combout
-    Info (332098): Cell: Mux18~1  from: datab  to: combout
+    Info (332098): Cell: Mux18~1  from: datac  to: combout
     Info (332098): Cell: Mux18~1  from: datad  to: combout
-    Info (332098): Cell: Mux19~0  from: datad  to: combout
+    Info (332098): Cell: Mux19~0  from: dataa  to: combout
     Info (332098): Cell: Mux19~1  from: datad  to: combout
     Info (332098): Cell: Mux1~0  from: datac  to: combout
-    Info (332098): Cell: Mux1~1  from: datac  to: combout
-    Info (332098): Cell: Mux20~0  from: datac  to: combout
-    Info (332098): Cell: Mux20~1  from: datab  to: combout
-    Info (332098): Cell: Mux20~1  from: datad  to: combout
+    Info (332098): Cell: Mux1~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~0  from: datab  to: combout
+    Info (332098): Cell: Mux20~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: datac  to: combout
     Info (332098): Cell: Mux21~0  from: datab  to: combout
-    Info (332098): Cell: Mux21~1  from: dataa  to: combout
+    Info (332098): Cell: Mux21~1  from: datac  to: combout
     Info (332098): Cell: Mux22~0  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: datad  to: combout
+    Info (332098): Cell: Mux22~1  from: dataa  to: combout
+    Info (332098): Cell: Mux22~1  from: datac  to: combout
     Info (332098): Cell: Mux23~0  from: datac  to: combout
-    Info (332098): Cell: Mux23~1  from: datad  to: combout
-    Info (332098): Cell: Mux2~0  from: datab  to: combout
-    Info (332098): Cell: Mux2~1  from: datab  to: combout
+    Info (332098): Cell: Mux23~1  from: datab  to: combout
+    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux2~1  from: dataa  to: combout
     Info (332098): Cell: Mux2~1  from: datac  to: combout
     Info (332098): Cell: Mux3~0  from: datac  to: combout
-    Info (332098): Cell: Mux3~1  from: datac  to: combout
-    Info (332098): Cell: Mux4~0  from: datab  to: combout
-    Info (332098): Cell: Mux4~1  from: datab  to: combout
+    Info (332098): Cell: Mux3~1  from: datad  to: combout
+    Info (332098): Cell: Mux4~0  from: datac  to: combout
+    Info (332098): Cell: Mux4~1  from: datac  to: combout
     Info (332098): Cell: Mux4~1  from: datad  to: combout
     Info (332098): Cell: Mux5~0  from: dataa  to: combout
-    Info (332098): Cell: Mux5~1  from: datad  to: combout
-    Info (332098): Cell: Mux6~0  from: datab  to: combout
-    Info (332098): Cell: Mux6~1  from: datac  to: combout
+    Info (332098): Cell: Mux5~1  from: datab  to: combout
+    Info (332098): Cell: Mux6~0  from: datad  to: combout
+    Info (332098): Cell: Mux6~1  from: datab  to: combout
     Info (332098): Cell: Mux6~1  from: datad  to: combout
-    Info (332098): Cell: Mux7~0  from: datac  to: combout
-    Info (332098): Cell: Mux7~1  from: dataa  to: combout
-    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
-    Info (332098): Cell: WideOr80~2  from: dataa  to: combout
+    Info (332098): Cell: Mux7~0  from: datad  to: combout
+    Info (332098): Cell: Mux7~1  from: datad  to: combout
+    Info (332098): Cell: WideOr80~1  from: datad  to: combout
+    Info (332098): Cell: WideOr80~2  from: datab  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.758
+Info (332146): Worst-case setup slack is -4.896
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.758            -147.465 currentState[0] 
-    Info (332119):    -1.745            -200.282 clk 
-Info (332146): Worst-case hold slack is 0.148
+    Info (332119):    -4.896            -156.942 currentState[0] 
+    Info (332119):    -1.875            -193.662 clk 
+Info (332146): Worst-case hold slack is -0.017
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.148               0.000 clk 
-    Info (332119):     0.230               0.000 currentState[0] 
+    Info (332119):    -0.017              -0.017 currentState[0] 
+    Info (332119):     0.152               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -187.353 clk 
-    Info (332119):    -0.718             -53.266 currentState[0] 
+    Info (332119):    -3.000            -187.136 clk 
+    Info (332119):    -0.563             -35.389 currentState[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4841 megabytes
-    Info: Processing ended: Tue Nov 24 00:09:36 2020
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Tue Nov 24 00:22:54 2020
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 

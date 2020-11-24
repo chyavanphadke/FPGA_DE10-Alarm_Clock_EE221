@@ -33,7 +33,7 @@ if( concatValue == "0000"){
   lcd.setCursor(0, 0);
   lcd.print("State 0 -> Reset");
   lcd.setCursor(0, 1);
-  lcd.print("Displaying Time");}
+  lcd.print("Displaying Time ");}
 
 if( concatValue == "1000"){
   lcd.setCursor(0, 0);
@@ -57,13 +57,13 @@ if( concatValue == "0010"){
 
 if( concatValue == "1010"){
   lcd.setCursor(0, 0);
-  lcd.print("State 1 -> Reset");
+  lcd.print("State 1 -> Alarm");
   lcd.setCursor(0, 1);
   lcd.print("Alarm - Set Min ");}
 
 if( concatValue == "0110"){
   lcd.setCursor(0, 0);
-  lcd.print("State 1 -> Reset");
+  lcd.print("State 1 -> Alarm");
   lcd.setCursor(0, 1);
   lcd.print("Alarm - Set Hour");}
 // Alarm done 
@@ -71,13 +71,33 @@ if( concatValue == "0110"){
 
 if( concatValue == "0001"){
   lcd.setCursor(0, 0);
-  lcd.print("State 0 -> Timer");
+  lcd.print("State 2 -> Timer");
   lcd.setCursor(0, 1);
   lcd.print("                ");}
 
+if( concatValue == "1001"){
+  lcd.setCursor(0, 0);
+  lcd.print("State 2 -> Timer");
+  lcd.setCursor(0, 1);
+  lcd.print("Timer - Set Min ");}
+
+if( concatValue == "0101"){
+  lcd.setCursor(0, 0);
+  lcd.print("State 2 -> Timer");
+  lcd.setCursor(0, 1);
+  lcd.print("Timer - Set Hour");}
+// Timer Done
+
+
 if( concatValue == "0011"){
   lcd.setCursor(0, 0);
-  lcd.print("State 0 -> Stopw");
+  lcd.print("State 3 -> Stopw");
   lcd.setCursor(0, 1);
-  lcd.print("                ");}
+  lcd.print("S0 High to Start");}
+
+if( concatValue == "1011"){
+  lcd.setCursor(0, 0);
+  lcd.print("State 3 -> Stopw");
+  lcd.setCursor(0, 1);
+  lcd.print("S0 Low to Stop  ");}
 }

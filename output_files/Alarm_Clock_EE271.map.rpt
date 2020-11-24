@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Alarm_Clock_EE271
-Tue Nov 24 00:09:10 2020
+Tue Nov 24 00:22:29 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 24 00:09:10 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 24 00:22:29 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Alarm_Clock_EE271                           ;
 ; Top-level Entity Name              ; Alarm_Clock_EE271                           ;
@@ -188,9 +188,9 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Total combinational functions               ; 539       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 249       ;
-;     -- 3 input functions                    ; 91        ;
-;     -- <=2 input functions                  ; 199       ;
+;     -- 4 input functions                    ; 253       ;
+;     -- 3 input functions                    ; 88        ;
+;     -- <=2 input functions                  ; 198       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
 ;     -- normal mode                          ; 382       ;
@@ -206,8 +206,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 181       ;
-; Total fan-out                               ; 2444      ;
-; Average fan-out                             ; 2.80      ;
+; Total fan-out                               ; 2449      ;
+; Average fan-out                             ; 2.81      ;
 +---------------------------------------------+-----------+
 
 
@@ -304,22 +304,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |Alarm_Clock_EE271|counter_not_pressed[15] ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |Alarm_Clock_EE271|counter_pressed[18]     ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|seconds[0]              ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |Alarm_Clock_EE271|counter_not_pressed[19] ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 25 LEs               ; 25 LEs                 ; Yes        ; |Alarm_Clock_EE271|counter_pressed[5]      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|seconds[2]              ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|alarm_hours[6]          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|alarm_minutes[7]        ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Alarm_Clock_EE271|timer_seconds[0]        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Alarm_Clock_EE271|stopwatch_seconds[1]    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|stopwatch_minutes[0]    ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|stopwatch_hours[0]      ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|alarm_minutes[0]        ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Alarm_Clock_EE271|timer_seconds[7]        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Alarm_Clock_EE271|stopwatch_seconds[6]    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|stopwatch_minutes[5]    ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Alarm_Clock_EE271|stopwatch_hours[7]      ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |Alarm_Clock_EE271|hours[0]                ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |Alarm_Clock_EE271|minutes[4]              ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |Alarm_Clock_EE271|timer_minutes[3]        ;
-; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |Alarm_Clock_EE271|timer_hours[4]          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Alarm_Clock_EE271|timer_seconds[3]        ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Alarm_Clock_EE271|Mux14                   ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Alarm_Clock_EE271|Mux7                    ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |Alarm_Clock_EE271|minutes[7]              ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |Alarm_Clock_EE271|timer_minutes[5]        ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; Yes        ; |Alarm_Clock_EE271|timer_hours[1]          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Alarm_Clock_EE271|timer_seconds[1]        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Alarm_Clock_EE271|Mux15                   ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Alarm_Clock_EE271|Mux20                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -344,12 +344,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;     normal            ; 383                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 33                          ;
-;         3 data inputs ; 85                          ;
-;         4 data inputs ; 249                         ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 82                          ;
+;         4 data inputs ; 253                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.80                        ;
+; Average LUT depth     ; 3.81                        ;
 +-----------------------+-----------------------------+
 
 
@@ -368,7 +368,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 24 00:08:59 2020
+    Info: Processing started: Tue Nov 24 00:22:18 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alarm_Clock_EE271 -c Alarm_Clock_EE271
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -571,10 +571,10 @@ Info (21057): Implemented 627 device resources after synthesis - the final resou
     Info (21059): Implemented 63 output pins
     Info (21061): Implemented 551 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 136 warnings
-    Info: Peak virtual memory: 4792 megabytes
-    Info: Processing ended: Tue Nov 24 00:09:10 2020
+    Info: Peak virtual memory: 4790 megabytes
+    Info: Processing ended: Tue Nov 24 00:22:29 2020
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

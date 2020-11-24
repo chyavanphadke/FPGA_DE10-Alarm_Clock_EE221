@@ -370,7 +370,7 @@ always @ (currentState) begin
 			display_seconds = stopwatch_seconds;
 			display_minutes = stopwatch_minutes;
 			
-			if (switches[9] == 1'b1) begin
+			if (switches[0] == 1'b1) begin
 				ps = {switches[0],switches[1], 1'b1,1'b1};
 			end
 			else begin

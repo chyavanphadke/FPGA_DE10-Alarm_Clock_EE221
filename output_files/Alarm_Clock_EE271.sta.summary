@@ -3,19 +3,19 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'currentState[0]'
-Slack : -11.543
-TNS   : -350.891
+Slack : -11.087
+TNS   : -366.117
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -5.136
-TNS   : -684.144
+Slack : -5.442
+TNS   : -667.524
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.341
+Slack : 0.348
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'currentState[0]'
-Slack : 0.878
+Slack : 0.444
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -23,23 +23,23 @@ Slack : -3.000
 TNS   : -256.943
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'currentState[0]'
-Slack : -2.250
-TNS   : -280.825
+Slack : -1.713
+TNS   : -218.459
 
 Type  : Slow 1200mV 0C Model Setup 'currentState[0]'
-Slack : -10.752
-TNS   : -327.647
+Slack : -10.373
+TNS   : -341.419
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -4.732
-TNS   : -618.952
+Slack : -4.956
+TNS   : -604.937
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.306
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'currentState[0]'
-Slack : 0.792
+Slack : 0.478
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -47,31 +47,31 @@ Slack : -3.000
 TNS   : -256.943
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'currentState[0]'
-Slack : -2.103
-TNS   : -248.964
+Slack : -1.529
+TNS   : -189.397
 
 Type  : Fast 1200mV 0C Model Setup 'currentState[0]'
-Slack : -4.758
-TNS   : -147.465
+Slack : -4.896
+TNS   : -156.942
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.745
-TNS   : -200.282
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.148
-TNS   : 0.000
+Slack : -1.875
+TNS   : -193.662
 
 Type  : Fast 1200mV 0C Model Hold 'currentState[0]'
-Slack : 0.230
+Slack : -0.017
+TNS   : -0.017
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.152
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -187.353
+TNS   : -187.136
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'currentState[0]'
-Slack : -0.718
-TNS   : -53.266
+Slack : -0.563
+TNS   : -35.389
 
 ------------------------------------------------------------
