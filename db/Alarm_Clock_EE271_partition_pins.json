@@ -48,6 +48,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "ps[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ps[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ps[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ps[3]",
+					"strict" : false
+				},
+				{
 					"name" : "seg0[0]",
 					"strict" : false
 				},
@@ -216,11 +232,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "switches[1]",
 					"strict" : false
 				},
 				{
 					"name" : "switches[9]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				},
 				{
@@ -229,14 +253,6 @@
 				},
 				{
 					"name" : "pushBtn[0]",
-					"strict" : false
-				},
-				{
-					"name" : "switches[1]",
-					"strict" : false
-				},
-				{
-					"name" : "switches[0]",
 					"strict" : false
 				}
 			]

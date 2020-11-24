@@ -23,7 +23,7 @@ input clk;
 // LED's
 output reg [9:0] led;
 output reg buzzer;
-input [1:0] ps;
+output reg [3:0] ps;
 
 output reg [7:0] seg0;
 output reg [7:0] seg1;
@@ -330,21 +330,53 @@ always @ (currentState) begin
 			display_hours = hours;
 			display_minutes = minutes;
 			display_seconds = seconds;
+			
+			if (switches[9] == 1'b1) begin
+				ps = {switches[0],switches[1], 1'b0,1'b0};
+			end
+			else begin
+				ps = 4'b0000;
+			end
+			
 			end
 		1: begin 
 			display_hours = alarm_hours;
 			display_minutes = alarm_minutes;
 			display_seconds = 0;
+			
+			if (switches[9] == 1'b1) begin
+				ps = {switches[0],switches[1], 1'b0,1'b1};
+			end
+			else begin
+				ps = 4'b0001;
+			end
+			
 			end
 		2: begin 
 			display_hours = timer_hours;
 			display_minutes = timer_minutes;
 			display_seconds = timer_seconds;
+			
+			if (switches[9] == 1'b1) begin
+				ps = {switches[0],switches[1], 1'b1,1'b0};
+			end
+			else begin
+				ps = 4'b0010;
+			end
+			
 			end
 		3: begin 
 			display_hours = stopwatch_hours;
 			display_seconds = stopwatch_seconds;
 			display_minutes = stopwatch_minutes;
+			
+			if (switches[9] == 1'b1) begin
+				ps = {switches[0],switches[1], 1'b1,1'b1};
+			end
+			else begin
+				ps = 4'b0011;
+			end
+			
 			end
 	endcase
 end

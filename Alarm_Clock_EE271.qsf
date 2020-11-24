@@ -125,4 +125,6 @@ set_location_assignment PIN_AB7 -to buzzer
 set_location_assignment PIN_F17 -to segDecimalPoint
 set_location_assignment PIN_AB9 -to ps[0]
 set_location_assignment PIN_Y10 -to ps[1]
+set_location_assignment PIN_AA11 -to ps[2]
+set_location_assignment PIN_AA12 -to ps[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
