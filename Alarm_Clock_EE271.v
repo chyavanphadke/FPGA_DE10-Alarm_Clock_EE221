@@ -2,7 +2,9 @@ module Alarm_Clock_EE271 (
 	clk, 
 	pushBtn, 
 	switches, 
-	led, 
+	led,
+	buzzer,
+	ps,
 	seg0, seg1, 
 	seg2, seg3, 
 	seg4, seg5
@@ -19,7 +21,8 @@ input clk;
 
 // LED's
 output reg [9:0] led;
-
+output reg buzzer;
+input [1:0] ps;
 
 output reg [7:0] seg0;
 output reg [7:0] seg1;
@@ -32,6 +35,8 @@ reg [1:0] currentState;
 
 reg [24:0]counter_pressed, counter_not_pressed;
 reg button_state = 1'b1;
+
+reg alarmflag;
 
 initial begin
 currentState <= 2'b0;
@@ -46,6 +51,7 @@ initial begin
   seg3 = 8'b11_11_11_11;
   seg4 = 8'b11_11_11_11;
   seg5 = 8'b11_11_11_11;
+  alarmflag = 0;
 end
 
 // Global Variables to keep count
@@ -53,8 +59,17 @@ reg [25:0] count = 0;
 reg [7:0] hours = 0;
 reg [7:0] seconds = 0;
 reg [7:0] minutes = 0;
+
 reg [7:0] alarm_hours = 0;
-reg [7:0] alarm_minutes = 1; // alarm initially set at 1 minute.
+reg [7:0] alarm_minutes = 0; // alarm initially set at 1 minute.
+
+reg [7:0] timer_hours = 0;
+reg [7:0] timer_minutes = 0;
+reg [7:0] timer_seconds = 25'd15;
+
+reg [7:0] stopwatch_hours = 0;
+reg [7:0] stopwatch_minutes = 0;
+reg [7:0] stopwatch_seconds = 0;
 
 reg [7:0] display_hours = 0;
 reg [7:0] display_seconds = 0;
@@ -66,11 +81,22 @@ reg switch_old = 0;
 always @ (posedge clk) begin
 
 
-
 if(!pushBtn[1]) begin // Reset if reset pin is LOW
 	hours <= 0;
 	minutes <= 0;
 	seconds <= 0;
+	
+	alarm_hours <= 0;
+	alarm_minutes <= 0; // alarm initially set at 1 minute.
+
+	timer_hours <= 0;
+	timer_minutes <= 0;
+	timer_seconds <= 0;
+
+	stopwatch_hours <= 0;
+	stopwatch_minutes <= 0;
+	stopwatch_seconds <= 0;
+	alarmflag = 1;
 end
 
 else begin
@@ -100,6 +126,58 @@ else begin
 			else begin
 				seconds <= seconds + 1;
 			end
+			
+			// ..........
+			if(timer_seconds == 6'd00 && timer_minutes != 0) begin
+				timer_seconds <= 6'd59;
+				
+				if(timer_minutes == 6'd00) begin
+					timer_minutes <= 0;
+					
+					if(timer_hours == 6'd00) begin 
+						timer_hours <= 0;
+					end
+					else begin
+						timer_hours <= timer_hours - 1;
+					end
+					
+				end
+				else begin
+					timer_minutes <= timer_minutes - 1;
+				end
+				
+			end
+			else begin
+				timer_seconds <= timer_seconds - 1;
+			end
+			//...........
+			// Stopwatch
+			// ..........
+			if (currentState ==3 && switches[0] == 1) begin
+				if(stopwatch_seconds == 6'd00 && stopwatch_minutes != 0) begin
+					stopwatch_seconds <= 6'd59;
+					
+					if(stopwatch_minutes == 6'd59) begin
+						stopwatch_minutes <= 0;
+						
+						if(stopwatch_hours == 6'd23) begin 
+							stopwatch_hours <= 0;
+						end
+						else begin
+							stopwatch_hours <= stopwatch_hours + 1;
+						end
+						
+					end
+					else begin
+						stopwatch_minutes <= stopwatch_minutes + 1;
+					end
+					
+				end
+				else begin
+					stopwatch_seconds <= stopwatch_seconds + 1;
+				end
+			end
+			//...........
 			
 		end
 		else begin
@@ -137,6 +215,7 @@ else begin
 					end
 					else begin
 						alarm_hours <= alarm_hours + 1;
+						alarmflag <=1;
 					end
             end
             else if(switches[0] == 1 && switches[1] == 0) begin
@@ -145,22 +224,33 @@ else begin
 					end
 					else begin
 						alarm_minutes <= alarm_minutes + 1;
+						alarmflag <=1;
 					end
             end
     end
+	 else if(currentState == 2 && switch_old != pushBtn[0] && !pushBtn[0]) begin
+        if(switches[9] == 1'b1)
+            if(switches[0] == 0 && switches[1] == 1) begin
+                if(timer_hours == 6'd23) begin
+						timer_hours <= 0;
+					end
+					else begin
+						timer_hours <= timer_hours + 1;
+					end
+            end
+            else if(switches[0] == 1 && switches[1] == 0) begin
+                if(timer_minutes == 6'd23) begin
+						timer_minutes <= 0;
+					end
+					else begin
+						timer_minutes <= timer_minutes + 1;
+					end
+            end
+    end
+	 
 end
 
 switch_old  <= pushBtn[0];
-end
-
-// alarm clock
-always @ (posedge clk) begin
-		if((hours == alarm_hours) && (minutes == alarm_minutes)) begin
-			led[9] = 1;
-		end
-		else begin
-			led[9] = 0;
-	end	
 end
 
 //....................................................................................
@@ -215,6 +305,17 @@ begin
 end
 
 
+always @ (posedge clk) begin
+		if((hours == alarm_hours) && (minutes == alarm_minutes) && (alarmflag == 1)) begin
+			led = 10'b1111111111;
+			buzzer = 1;
+		end
+		else begin
+			led = 10'b0000000000;
+			buzzer = 0; 
+	end	
+end
+
 always @ (currentState) begin
 	case(currentState)
 		0: begin 
@@ -228,14 +329,14 @@ always @ (currentState) begin
 			display_seconds = 0;
 			end
 		2: begin 
-			display_hours = 0;
-			display_seconds = 0;
-			display_minutes = 0;
+			display_hours = timer_hours;
+			display_minutes = timer_minutes;
+			display_seconds = timer_seconds;
 			end
 		3: begin 
-			display_hours = 0;
-			display_seconds = 0;
-			display_minutes = 0;
+			display_hours = stopwatch_hours;
+			display_seconds = stopwatch_seconds;
+			display_minutes = stopwatch_minutes;
 			end
 	endcase
 end

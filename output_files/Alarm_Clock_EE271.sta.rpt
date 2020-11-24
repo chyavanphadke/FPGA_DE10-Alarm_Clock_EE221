@@ -1,5 +1,5 @@
 Timing Analyzer report for Alarm_Clock_EE271
-Tue Nov 17 18:21:36 2020
+Mon Nov 23 21:53:59 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -92,14 +92,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.30        ;
+; Average used               ; 1.37        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  10.1%      ;
-;     Processor 3            ;  10.0%      ;
-;     Processor 4            ;  10.0%      ;
+;     Processor 2            ;  12.4%      ;
+;     Processor 3            ;  12.2%      ;
+;     Processor 4            ;  12.1%      ;
 +----------------------------+-------------+
 
 
@@ -113,25 +113,25 @@ https://fpgasoftware.intel.com/eula.
 +-----------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------+
 
 
-+------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                   ;
-+-----------+-----------------+-----------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name      ; Note ;
-+-----------+-----------------+-----------------+------+
-; 83.24 MHz ; 83.24 MHz       ; currentState[0] ;      ;
-; 160.9 MHz ; 160.9 MHz       ; clk             ;      ;
-+-----------+-----------------+-----------------+------+
++-------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                    ;
++------------+-----------------+-----------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
++------------+-----------------+-----------------+------+
+; 69.53 MHz  ; 69.53 MHz       ; currentState[0] ;      ;
+; 152.09 MHz ; 152.09 MHz      ; clk             ;      ;
++------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary      ;
-+-----------------+--------+---------------+
-; Clock           ; Slack  ; End Point TNS ;
-+-----------------+--------+---------------+
-; currentState[0] ; -9.989 ; -277.451      ;
-; clk             ; -5.215 ; -401.559      ;
-+-----------------+--------+---------------+
++-------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary       ;
++-----------------+---------+---------------+
+; Clock           ; Slack   ; End Point TNS ;
++-----------------+---------+---------------+
+; currentState[0] ; -11.074 ; -357.145      ;
+; clk             ; -5.575  ; -677.652      ;
++-----------------+---------+---------------+
 
 
 +-----------------------------------------+
@@ -139,8 +139,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; clk             ; 0.331 ; 0.000         ;
-; currentState[0] ; 0.643 ; 0.000         ;
+; clk             ; 0.348 ; 0.000         ;
+; currentState[0] ; 0.635 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -161,8 +161,8 @@ No paths to report.
 +-----------------+--------+------------------------+
 ; Clock           ; Slack  ; End Point TNS          ;
 +-----------------+--------+------------------------+
-; clk             ; -3.000 ; -172.763               ;
-; currentState[0] ; -1.101 ; -78.637                ;
+; clk             ; -3.000 ; -255.540               ;
+; currentState[0] ; -1.732 ; -193.989               ;
 +-----------------+--------+------------------------+
 
 
@@ -177,20 +177,20 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
 +------------+-----------------+-----------------+------+
-; 87.4 MHz   ; 87.4 MHz        ; currentState[0] ;      ;
-; 170.44 MHz ; 170.44 MHz      ; clk             ;      ;
+; 73.0 MHz   ; 73.0 MHz        ; currentState[0] ;      ;
+; 165.59 MHz ; 165.59 MHz      ; clk             ;      ;
 +------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary       ;
-+-----------------+--------+---------------+
-; Clock           ; Slack  ; End Point TNS ;
-+-----------------+--------+---------------+
-; currentState[0] ; -9.387 ; -260.358      ;
-; clk             ; -4.867 ; -365.890      ;
-+-----------------+--------+---------------+
++-------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary        ;
++-----------------+---------+---------------+
+; Clock           ; Slack   ; End Point TNS ;
++-----------------+---------+---------------+
+; currentState[0] ; -10.174 ; -330.578      ;
+; clk             ; -5.039  ; -613.839      ;
++-----------------+---------+---------------+
 
 
 +-----------------------------------------+
@@ -198,8 +198,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; clk             ; 0.296 ; 0.000         ;
-; currentState[0] ; 0.547 ; 0.000         ;
+; clk             ; 0.312 ; 0.000         ;
+; currentState[0] ; 0.544 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -220,8 +220,8 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; clk             ; -3.000 ; -172.763              ;
-; currentState[0] ; -0.988 ; -67.859               ;
+; clk             ; -3.000 ; -255.540              ;
+; currentState[0] ; -1.571 ; -169.534              ;
 +-----------------+--------+-----------------------+
 
 
@@ -236,8 +236,8 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; currentState[0] ; -4.115 ; -110.413      ;
-; clk             ; -1.784 ; -105.398      ;
+; currentState[0] ; -4.701 ; -147.673      ;
+; clk             ; -1.938 ; -199.057      ;
 +-----------------+--------+---------------+
 
 
@@ -246,8 +246,8 @@ No synchronizer chains to report.
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; clk             ; 0.030 ; 0.000         ;
-; currentState[0] ; 0.407 ; 0.000         ;
+; currentState[0] ; 0.096 ; 0.000         ;
+; clk             ; 0.152 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -268,8 +268,8 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; clk             ; -3.000 ; -127.080              ;
-; currentState[0] ; -0.222 ; -6.283                ;
+; clk             ; -3.000 ; -186.092              ;
+; currentState[0] ; -0.566 ; -34.871               ;
 +-----------------+--------+-----------------------+
 
 
@@ -279,18 +279,18 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+--------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                            ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Clock            ; Setup    ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+----------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -9.989   ; 0.030 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -5.215   ; 0.030 ; N/A      ; N/A     ; -3.000              ;
-;  currentState[0] ; -9.989   ; 0.407 ; N/A      ; N/A     ; -1.101              ;
-; Design-wide TNS  ; -679.01  ; 0.0   ; 0.0      ; 0.0     ; -251.4              ;
-;  clk             ; -401.559 ; 0.000 ; N/A      ; N/A     ; -172.763            ;
-;  currentState[0] ; -277.451 ; 0.000 ; N/A      ; N/A     ; -78.637             ;
-+------------------+----------+-------+----------+---------+---------------------+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -11.074   ; 0.096 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -5.575    ; 0.152 ; N/A      ; N/A     ; -3.000              ;
+;  currentState[0] ; -11.074   ; 0.096 ; N/A      ; N/A     ; -1.732              ;
+; Design-wide TNS  ; -1034.797 ; 0.0   ; 0.0      ; 0.0     ; -449.529            ;
+;  clk             ; -677.652  ; 0.000 ; N/A      ; N/A     ; -255.540            ;
+;  currentState[0] ; -357.145  ; 0.000 ; N/A      ; N/A     ; -193.989            ;
++------------------+-----------+-------+----------+---------+---------------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -308,6 +308,7 @@ No synchronizer chains to report.
 ; led[7]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[8]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; led[9]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; buzzer       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; seg0[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; seg0[1]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; seg0[2]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -372,12 +373,14 @@ No synchronizer chains to report.
 ; switches[6]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switches[7]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switches[8]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; ps[0]               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; ps[1]               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; clk                 ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; switches[1]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; switches[0]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; pushBtn[0]          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; pushBtn[1]          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; switches[9]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; pushBtn[0]          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; switches[1]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; switches[0]         ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TMS~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TCK~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_TDI~        ; 2.5 V Schmitt Trigger ; 2000 ps         ; 2000 ps         ;
@@ -403,6 +406,7 @@ No synchronizer chains to report.
 ; led[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; led[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; led[9]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; buzzer       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; seg0[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; seg0[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; seg0[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -470,6 +474,7 @@ No synchronizer chains to report.
 ; led[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; led[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; led[9]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
+; buzzer       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; seg0[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; seg0[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; seg0[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -537,6 +542,7 @@ No synchronizer chains to report.
 ; led[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; led[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; led[9]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; buzzer       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; seg0[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; seg0[1]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; seg0[2]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -594,10 +600,10 @@ No synchronizer chains to report.
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 4720     ; 0        ; 0        ; 0        ;
-; currentState[0] ; clk             ; 34       ; 34       ; 0        ; 0        ;
-; clk             ; currentState[0] ; 830      ; 0        ; 185      ; 0        ;
-; currentState[0] ; currentState[0] ; 277      ; 277      ; 13       ; 13       ;
+; clk             ; clk             ; 7603     ; 0        ; 0        ; 0        ;
+; currentState[0] ; clk             ; 125      ; 125      ; 0        ; 0        ;
+; clk             ; currentState[0] ; 3456     ; 0        ; 1808     ; 0        ;
+; currentState[0] ; currentState[0] ; 904      ; 904      ; 438      ; 438      ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -607,10 +613,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 4720     ; 0        ; 0        ; 0        ;
-; currentState[0] ; clk             ; 34       ; 34       ; 0        ; 0        ;
-; clk             ; currentState[0] ; 830      ; 0        ; 185      ; 0        ;
-; currentState[0] ; currentState[0] ; 277      ; 277      ; 13       ; 13       ;
+; clk             ; clk             ; 7603     ; 0        ; 0        ; 0        ;
+; currentState[0] ; clk             ; 125      ; 125      ; 0        ; 0        ;
+; clk             ; currentState[0] ; 3456     ; 0        ; 1808     ; 0        ;
+; currentState[0] ; currentState[0] ; 904      ; 904      ; 438      ; 438      ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -635,9 +641,9 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 334   ; 334  ;
-; Unconstrained Output Ports      ; 42    ; 42   ;
-; Unconstrained Output Port Paths ; 42    ; 42   ;
+; Unconstrained Input Port Paths  ; 507   ; 507  ;
+; Unconstrained Output Ports      ; 52    ; 52   ;
+; Unconstrained Output Port Paths ; 52    ; 52   ;
 +---------------------------------+-------+------+
 
 
@@ -669,6 +675,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; buzzer      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[8]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led[9]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -732,6 +748,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; buzzer      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[4]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; led[8]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; led[9]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; seg0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -783,7 +809,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 17 18:21:34 2020
+    Info: Processing started: Mon Nov 23 21:53:55 2020
 Info: Command: quartus_sta Alarm_Clock_EE271 -c Alarm_Clock_EE271
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -798,126 +824,216 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name currentState[0] currentState[0]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: Mux0~0  from: dataa  to: combout
-    Info (332098): Cell: Mux10~0  from: datab  to: combout
-    Info (332098): Cell: Mux11~0  from: datac  to: combout
-    Info (332098): Cell: Mux12~0  from: datac  to: combout
-    Info (332098): Cell: Mux13~0  from: datab  to: combout
-    Info (332098): Cell: Mux14~0  from: datac  to: combout
-    Info (332098): Cell: Mux15~0  from: datac  to: combout
+    Info (332098): Cell: Mux0~1  from: datab  to: combout
+    Info (332098): Cell: Mux0~1  from: datac  to: combout
+    Info (332098): Cell: Mux10~1  from: datac  to: combout
+    Info (332098): Cell: Mux12~1  from: datab  to: combout
+    Info (332098): Cell: Mux13~1  from: datab  to: combout
+    Info (332098): Cell: Mux14~1  from: dataa  to: combout
+    Info (332098): Cell: Mux16~0  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datad  to: combout
+    Info (332098): Cell: Mux17~0  from: datab  to: combout
+    Info (332098): Cell: Mux17~1  from: dataa  to: combout
+    Info (332098): Cell: Mux18~0  from: datac  to: combout
+    Info (332098): Cell: Mux18~1  from: dataa  to: combout
+    Info (332098): Cell: Mux18~1  from: datac  to: combout
+    Info (332098): Cell: Mux19~0  from: dataa  to: combout
+    Info (332098): Cell: Mux19~1  from: datad  to: combout
     Info (332098): Cell: Mux1~0  from: datab  to: combout
-    Info (332098): Cell: Mux2~0  from: dataa  to: combout
-    Info (332098): Cell: Mux3~0  from: datac  to: combout
+    Info (332098): Cell: Mux1~1  from: datad  to: combout
+    Info (332098): Cell: Mux20~0  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: datac  to: combout
+    Info (332098): Cell: Mux21~0  from: dataa  to: combout
+    Info (332098): Cell: Mux21~1  from: datad  to: combout
+    Info (332098): Cell: Mux22~0  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datad  to: combout
+    Info (332098): Cell: Mux23~0  from: datac  to: combout
+    Info (332098): Cell: Mux23~1  from: datad  to: combout
+    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux2~1  from: dataa  to: combout
+    Info (332098): Cell: Mux2~1  from: datac  to: combout
+    Info (332098): Cell: Mux3~0  from: dataa  to: combout
+    Info (332098): Cell: Mux3~1  from: datac  to: combout
     Info (332098): Cell: Mux4~0  from: datac  to: combout
-    Info (332098): Cell: Mux5~0  from: datac  to: combout
-    Info (332098): Cell: Mux6~0  from: datad  to: combout
+    Info (332098): Cell: Mux4~1  from: datab  to: combout
+    Info (332098): Cell: Mux4~1  from: datac  to: combout
+    Info (332098): Cell: Mux5~0  from: dataa  to: combout
+    Info (332098): Cell: Mux5~1  from: datac  to: combout
+    Info (332098): Cell: Mux6~0  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: datac  to: combout
     Info (332098): Cell: Mux7~0  from: datac  to: combout
-    Info (332098): Cell: Mux8~0  from: datac  to: combout
-    Info (332098): Cell: Mux9~0  from: datac  to: combout
+    Info (332098): Cell: Mux7~1  from: datac  to: combout
+    Info (332098): Cell: WideOr80~0  from: dataa  to: combout
+    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -9.989
+Info (332146): Worst-case setup slack is -11.074
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.989            -277.451 currentState[0] 
-    Info (332119):    -5.215            -401.559 clk 
-Info (332146): Worst-case hold slack is 0.331
+    Info (332119):   -11.074            -357.145 currentState[0] 
+    Info (332119):    -5.575            -677.652 clk 
+Info (332146): Worst-case hold slack is 0.348
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.331               0.000 clk 
-    Info (332119):     0.643               0.000 currentState[0] 
+    Info (332119):     0.348               0.000 clk 
+    Info (332119):     0.635               0.000 currentState[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -172.763 clk 
-    Info (332119):    -1.101             -78.637 currentState[0] 
+    Info (332119):    -3.000            -255.540 clk 
+    Info (332119):    -1.732            -193.989 currentState[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: Mux0~0  from: dataa  to: combout
-    Info (332098): Cell: Mux10~0  from: datab  to: combout
-    Info (332098): Cell: Mux11~0  from: datac  to: combout
-    Info (332098): Cell: Mux12~0  from: datac  to: combout
-    Info (332098): Cell: Mux13~0  from: datab  to: combout
-    Info (332098): Cell: Mux14~0  from: datac  to: combout
-    Info (332098): Cell: Mux15~0  from: datac  to: combout
+    Info (332098): Cell: Mux0~1  from: datab  to: combout
+    Info (332098): Cell: Mux0~1  from: datac  to: combout
+    Info (332098): Cell: Mux10~1  from: datac  to: combout
+    Info (332098): Cell: Mux12~1  from: datab  to: combout
+    Info (332098): Cell: Mux13~1  from: datab  to: combout
+    Info (332098): Cell: Mux14~1  from: dataa  to: combout
+    Info (332098): Cell: Mux16~0  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datad  to: combout
+    Info (332098): Cell: Mux17~0  from: datab  to: combout
+    Info (332098): Cell: Mux17~1  from: dataa  to: combout
+    Info (332098): Cell: Mux18~0  from: datac  to: combout
+    Info (332098): Cell: Mux18~1  from: dataa  to: combout
+    Info (332098): Cell: Mux18~1  from: datac  to: combout
+    Info (332098): Cell: Mux19~0  from: dataa  to: combout
+    Info (332098): Cell: Mux19~1  from: datad  to: combout
     Info (332098): Cell: Mux1~0  from: datab  to: combout
-    Info (332098): Cell: Mux2~0  from: dataa  to: combout
-    Info (332098): Cell: Mux3~0  from: datac  to: combout
+    Info (332098): Cell: Mux1~1  from: datad  to: combout
+    Info (332098): Cell: Mux20~0  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: datac  to: combout
+    Info (332098): Cell: Mux21~0  from: dataa  to: combout
+    Info (332098): Cell: Mux21~1  from: datad  to: combout
+    Info (332098): Cell: Mux22~0  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datad  to: combout
+    Info (332098): Cell: Mux23~0  from: datac  to: combout
+    Info (332098): Cell: Mux23~1  from: datad  to: combout
+    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux2~1  from: dataa  to: combout
+    Info (332098): Cell: Mux2~1  from: datac  to: combout
+    Info (332098): Cell: Mux3~0  from: dataa  to: combout
+    Info (332098): Cell: Mux3~1  from: datac  to: combout
     Info (332098): Cell: Mux4~0  from: datac  to: combout
-    Info (332098): Cell: Mux5~0  from: datac  to: combout
-    Info (332098): Cell: Mux6~0  from: datad  to: combout
+    Info (332098): Cell: Mux4~1  from: datab  to: combout
+    Info (332098): Cell: Mux4~1  from: datac  to: combout
+    Info (332098): Cell: Mux5~0  from: dataa  to: combout
+    Info (332098): Cell: Mux5~1  from: datac  to: combout
+    Info (332098): Cell: Mux6~0  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: datac  to: combout
     Info (332098): Cell: Mux7~0  from: datac  to: combout
-    Info (332098): Cell: Mux8~0  from: datac  to: combout
-    Info (332098): Cell: Mux9~0  from: datac  to: combout
+    Info (332098): Cell: Mux7~1  from: datac  to: combout
+    Info (332098): Cell: WideOr80~0  from: dataa  to: combout
+    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -9.387
+Info (332146): Worst-case setup slack is -10.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -9.387            -260.358 currentState[0] 
-    Info (332119):    -4.867            -365.890 clk 
-Info (332146): Worst-case hold slack is 0.296
+    Info (332119):   -10.174            -330.578 currentState[0] 
+    Info (332119):    -5.039            -613.839 clk 
+Info (332146): Worst-case hold slack is 0.312
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.296               0.000 clk 
-    Info (332119):     0.547               0.000 currentState[0] 
+    Info (332119):     0.312               0.000 clk 
+    Info (332119):     0.544               0.000 currentState[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -172.763 clk 
-    Info (332119):    -0.988             -67.859 currentState[0] 
+    Info (332119):    -3.000            -255.540 clk 
+    Info (332119):    -1.571            -169.534 currentState[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: Mux0~0  from: dataa  to: combout
-    Info (332098): Cell: Mux10~0  from: datab  to: combout
-    Info (332098): Cell: Mux11~0  from: datac  to: combout
-    Info (332098): Cell: Mux12~0  from: datac  to: combout
-    Info (332098): Cell: Mux13~0  from: datab  to: combout
-    Info (332098): Cell: Mux14~0  from: datac  to: combout
-    Info (332098): Cell: Mux15~0  from: datac  to: combout
+    Info (332098): Cell: Mux0~1  from: datab  to: combout
+    Info (332098): Cell: Mux0~1  from: datac  to: combout
+    Info (332098): Cell: Mux10~1  from: datac  to: combout
+    Info (332098): Cell: Mux12~1  from: datab  to: combout
+    Info (332098): Cell: Mux13~1  from: datab  to: combout
+    Info (332098): Cell: Mux14~1  from: dataa  to: combout
+    Info (332098): Cell: Mux16~0  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datac  to: combout
+    Info (332098): Cell: Mux16~1  from: datad  to: combout
+    Info (332098): Cell: Mux17~0  from: datab  to: combout
+    Info (332098): Cell: Mux17~1  from: dataa  to: combout
+    Info (332098): Cell: Mux18~0  from: datac  to: combout
+    Info (332098): Cell: Mux18~1  from: dataa  to: combout
+    Info (332098): Cell: Mux18~1  from: datac  to: combout
+    Info (332098): Cell: Mux19~0  from: dataa  to: combout
+    Info (332098): Cell: Mux19~1  from: datad  to: combout
     Info (332098): Cell: Mux1~0  from: datab  to: combout
-    Info (332098): Cell: Mux2~0  from: dataa  to: combout
-    Info (332098): Cell: Mux3~0  from: datac  to: combout
+    Info (332098): Cell: Mux1~1  from: datad  to: combout
+    Info (332098): Cell: Mux20~0  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: dataa  to: combout
+    Info (332098): Cell: Mux20~1  from: datac  to: combout
+    Info (332098): Cell: Mux21~0  from: dataa  to: combout
+    Info (332098): Cell: Mux21~1  from: datad  to: combout
+    Info (332098): Cell: Mux22~0  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datad  to: combout
+    Info (332098): Cell: Mux23~0  from: datac  to: combout
+    Info (332098): Cell: Mux23~1  from: datad  to: combout
+    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux2~1  from: dataa  to: combout
+    Info (332098): Cell: Mux2~1  from: datac  to: combout
+    Info (332098): Cell: Mux3~0  from: dataa  to: combout
+    Info (332098): Cell: Mux3~1  from: datac  to: combout
     Info (332098): Cell: Mux4~0  from: datac  to: combout
-    Info (332098): Cell: Mux5~0  from: datac  to: combout
-    Info (332098): Cell: Mux6~0  from: datad  to: combout
+    Info (332098): Cell: Mux4~1  from: datab  to: combout
+    Info (332098): Cell: Mux4~1  from: datac  to: combout
+    Info (332098): Cell: Mux5~0  from: dataa  to: combout
+    Info (332098): Cell: Mux5~1  from: datac  to: combout
+    Info (332098): Cell: Mux6~0  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: datac  to: combout
     Info (332098): Cell: Mux7~0  from: datac  to: combout
-    Info (332098): Cell: Mux8~0  from: datac  to: combout
-    Info (332098): Cell: Mux9~0  from: datac  to: combout
+    Info (332098): Cell: Mux7~1  from: datac  to: combout
+    Info (332098): Cell: WideOr80~0  from: dataa  to: combout
+    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.115
+Info (332146): Worst-case setup slack is -4.701
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.115            -110.413 currentState[0] 
-    Info (332119):    -1.784            -105.398 clk 
-Info (332146): Worst-case hold slack is 0.030
+    Info (332119):    -4.701            -147.673 currentState[0] 
+    Info (332119):    -1.938            -199.057 clk 
+Info (332146): Worst-case hold slack is 0.096
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.030               0.000 clk 
-    Info (332119):     0.407               0.000 currentState[0] 
+    Info (332119):     0.096               0.000 currentState[0] 
+    Info (332119):     0.152               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -127.080 clk 
-    Info (332119):    -0.222              -6.283 currentState[0] 
+    Info (332119):    -3.000            -186.092 clk 
+    Info (332119):    -0.566             -34.871 currentState[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4839 megabytes
-    Info: Processing ended: Tue Nov 17 18:21:36 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Mon Nov 23 21:53:59 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
