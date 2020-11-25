@@ -1,5 +1,5 @@
 Fitter report for Alarm_Clock_EE271
-Tue Nov 24 00:22:46 2020
+Tue Nov 24 11:55:28 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Nov 24 00:22:46 2020       ;
+; Fitter Status                      ; Successful - Tue Nov 24 11:55:28 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; Alarm_Clock_EE271                           ;
 ; Top-level Entity Name              ; Alarm_Clock_EE271                           ;
@@ -154,13 +154,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.17        ;
+; Average used               ; 1.14        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   5.6%      ;
-;     Processors 3-4         ;   5.5%      ;
+;     Processor 2            ;   5.0%      ;
+;     Processors 3-4         ;   4.8%      ;
 +----------------------------+-------------+
 
 
@@ -1898,7 +1898,7 @@ Info (176353): Automatically promoted node WideOr8~1  File: C:/Users/chyav/Deskt
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1911,8 +1911,8 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
     Info (170196): Router estimated peak interconnect usage is 13% of the available device resources in the region that extends from location X56_Y44 to location X66_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:07
-Info (11888): Total time spent on timing analysis during the Fitter is 0.69 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
+Info (11888): Total time spent on timing analysis during the Fitter is 0.61 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1920,10 +1920,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info (144001): Generated suppressed messages file C:/Users/chyav/Desktop/cp/Alarm_Clock_EE221/output_files/Alarm_Clock_EE271.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5665 megabytes
-    Info: Processing ended: Tue Nov 24 00:22:47 2020
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 5680 megabytes
+    Info: Processing ended: Tue Nov 24 11:55:28 2020
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +----------------------------+
