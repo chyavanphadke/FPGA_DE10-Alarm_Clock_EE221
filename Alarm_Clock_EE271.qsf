@@ -121,7 +121,7 @@ set_location_assignment PIN_A13 -to switches[6]
 set_location_assignment PIN_A14 -to switches[7]
 set_location_assignment PIN_B14 -to switches[8]
 set_location_assignment PIN_F15 -to switches[9]
-set_location_assignment PIN_AB7 -to buzzer
+set_location_assignment PIN_AA19 -to buzzer
 set_location_assignment PIN_F17 -to segDecimalPoint
 set_location_assignment PIN_AB9 -to ps[0]
 set_location_assignment PIN_Y10 -to ps[1]

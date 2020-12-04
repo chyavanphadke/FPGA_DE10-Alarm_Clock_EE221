@@ -1,5 +1,5 @@
 Timing Analyzer report for Alarm_Clock_EE271
-Tue Nov 24 11:55:35 2020
+Wed Dec 02 00:59:38 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -99,7 +99,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;  13.4%      ;
 ;     Processor 3            ;  13.2%      ;
-;     Processor 4            ;  13.1%      ;
+;     Processor 4            ;  13.2%      ;
 +----------------------------+-------------+
 
 
@@ -118,8 +118,8 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-----------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name      ; Note ;
 +------------+-----------------+-----------------+------+
-; 67.31 MHz  ; 67.31 MHz       ; currentState[0] ;      ;
-; 155.23 MHz ; 155.23 MHz      ; clk             ;      ;
+; 62.34 MHz  ; 62.34 MHz       ; currentState[0] ;      ;
+; 150.35 MHz ; 150.35 MHz      ; clk             ;      ;
 +------------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -129,8 +129,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+---------+---------------+
 ; Clock           ; Slack   ; End Point TNS ;
 +-----------------+---------+---------------+
-; currentState[0] ; -11.087 ; -366.117      ;
-; clk             ; -5.442  ; -667.524      ;
+; currentState[0] ; -11.603 ; -378.829      ;
+; clk             ; -5.651  ; -709.361      ;
 +-----------------+---------+---------------+
 
 
@@ -139,8 +139,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
-; clk             ; 0.348 ; 0.000         ;
-; currentState[0] ; 0.444 ; 0.000         ;
+; currentState[0] ; 0.265 ; 0.000         ;
+; clk             ; 0.347 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -161,8 +161,8 @@ No paths to report.
 +-----------------+--------+------------------------+
 ; Clock           ; Slack  ; End Point TNS          ;
 +-----------------+--------+------------------------+
-; clk             ; -3.000 ; -256.943               ;
-; currentState[0] ; -1.713 ; -218.459               ;
+; clk             ; -3.000 ; -259.749               ;
+; currentState[0] ; -2.096 ; -305.593               ;
 +-----------------+--------+------------------------+
 
 
@@ -177,8 +177,8 @@ No synchronizer chains to report.
 +-----------+-----------------+-----------------+------+
 ; Fmax      ; Restricted Fmax ; Clock Name      ; Note ;
 +-----------+-----------------+-----------------+------+
-; 70.9 MHz  ; 70.9 MHz        ; currentState[0] ;      ;
-; 167.9 MHz ; 167.9 MHz       ; clk             ;      ;
+; 65.84 MHz ; 65.84 MHz       ; currentState[0] ;      ;
+; 162.6 MHz ; 162.6 MHz       ; clk             ;      ;
 +-----------+-----------------+-----------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -188,8 +188,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+---------+---------------+
 ; Clock           ; Slack   ; End Point TNS ;
 +-----------------+---------+---------------+
-; currentState[0] ; -10.373 ; -341.419      ;
-; clk             ; -4.956  ; -604.937      ;
+; currentState[0] ; -10.888 ; -353.262      ;
+; clk             ; -5.150  ; -642.785      ;
 +-----------------+---------+---------------+
 
 
@@ -198,8 +198,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------+-------+---------------+
 ; Clock           ; Slack ; End Point TNS ;
 +-----------------+-------+---------------+
+; currentState[0] ; 0.193 ; 0.000         ;
 ; clk             ; 0.311 ; 0.000         ;
-; currentState[0] ; 0.478 ; 0.000         ;
 +-----------------+-------+---------------+
 
 
@@ -220,8 +220,8 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; clk             ; -3.000 ; -256.943              ;
-; currentState[0] ; -1.529 ; -189.397              ;
+; clk             ; -3.000 ; -259.749              ;
+; currentState[0] ; -1.908 ; -270.697              ;
 +-----------------+--------+-----------------------+
 
 
@@ -236,8 +236,8 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; currentState[0] ; -4.896 ; -156.942      ;
-; clk             ; -1.875 ; -193.662      ;
+; currentState[0] ; -5.147 ; -162.268      ;
+; clk             ; -1.992 ; -209.433      ;
 +-----------------+--------+---------------+
 
 
@@ -246,7 +246,7 @@ No synchronizer chains to report.
 +-----------------+--------+---------------+
 ; Clock           ; Slack  ; End Point TNS ;
 +-----------------+--------+---------------+
-; currentState[0] ; -0.017 ; -0.017        ;
+; currentState[0] ; -0.058 ; -0.100        ;
 ; clk             ; 0.152  ; 0.000         ;
 +-----------------+--------+---------------+
 
@@ -268,8 +268,8 @@ No paths to report.
 +-----------------+--------+-----------------------+
 ; Clock           ; Slack  ; End Point TNS         ;
 +-----------------+--------+-----------------------+
-; clk             ; -3.000 ; -187.136              ;
-; currentState[0] ; -0.563 ; -35.389               ;
+; clk             ; -3.000 ; -189.321              ;
+; currentState[0] ; -0.801 ; -67.372               ;
 +-----------------+--------+-----------------------+
 
 
@@ -279,18 +279,18 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+----------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                              ;
-+------------------+-----------+--------+----------+---------+---------------------+
-; Clock            ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack ; -11.087   ; -0.017 ; N/A      ; N/A     ; -3.000              ;
-;  clk             ; -5.442    ; 0.152  ; N/A      ; N/A     ; -3.000              ;
-;  currentState[0] ; -11.087   ; -0.017 ; N/A      ; N/A     ; -1.713              ;
-; Design-wide TNS  ; -1033.641 ; -0.017 ; 0.0      ; 0.0     ; -475.402            ;
-;  clk             ; -667.524  ; 0.000  ; N/A      ; N/A     ; -256.943            ;
-;  currentState[0] ; -366.117  ; -0.017 ; N/A      ; N/A     ; -218.459            ;
-+------------------+-----------+--------+----------+---------+---------------------+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+----------+--------+----------+---------+---------------------+
+; Clock            ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -11.603  ; -0.058 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -5.651   ; 0.152  ; N/A      ; N/A     ; -3.000              ;
+;  currentState[0] ; -11.603  ; -0.058 ; N/A      ; N/A     ; -2.096              ;
+; Design-wide TNS  ; -1088.19 ; -0.1   ; 0.0      ; 0.0     ; -565.342            ;
+;  clk             ; -709.361 ; 0.000  ; N/A      ; N/A     ; -259.749            ;
+;  currentState[0] ; -378.829 ; -0.100 ; N/A      ; N/A     ; -305.593            ;
++------------------+----------+--------+----------+---------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -408,7 +408,7 @@ No synchronizer chains to report.
 ; led[7]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; led[8]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; led[9]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; buzzer          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; buzzer          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ps[0]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ps[1]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; ps[2]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
@@ -480,7 +480,7 @@ No synchronizer chains to report.
 ; led[7]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; led[8]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; led[9]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
-; buzzer          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; buzzer          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; ps[0]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; ps[1]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
 ; ps[2]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
@@ -552,7 +552,7 @@ No synchronizer chains to report.
 ; led[7]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; led[8]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; led[9]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; buzzer          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; buzzer          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ps[0]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ps[1]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; ps[2]           ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
@@ -614,10 +614,10 @@ No synchronizer chains to report.
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 7657     ; 0        ; 0        ; 0        ;
-; currentState[0] ; clk             ; 125      ; 125      ; 0        ; 0        ;
-; clk             ; currentState[0] ; 3194     ; 0        ; 1546     ; 0        ;
-; currentState[0] ; currentState[0] ; 1046     ; 1046     ; 580      ; 580      ;
+; clk             ; clk             ; 8235     ; 0        ; 0        ; 0        ;
+; currentState[0] ; clk             ; 164      ; 164      ; 0        ; 0        ;
+; clk             ; currentState[0] ; 3206     ; 0        ; 1592     ; 0        ;
+; currentState[0] ; currentState[0] ; 868      ; 868      ; 452      ; 452      ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -627,10 +627,10 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------+-----------------+----------+----------+----------+----------+
 ; From Clock      ; To Clock        ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------+-----------------+----------+----------+----------+----------+
-; clk             ; clk             ; 7657     ; 0        ; 0        ; 0        ;
-; currentState[0] ; clk             ; 125      ; 125      ; 0        ; 0        ;
-; clk             ; currentState[0] ; 3194     ; 0        ; 1546     ; 0        ;
-; currentState[0] ; currentState[0] ; 1046     ; 1046     ; 580      ; 580      ;
+; clk             ; clk             ; 8235     ; 0        ; 0        ; 0        ;
+; currentState[0] ; clk             ; 164      ; 164      ; 0        ; 0        ;
+; clk             ; currentState[0] ; 3206     ; 0        ; 1592     ; 0        ;
+; currentState[0] ; currentState[0] ; 868      ; 868      ; 452      ; 452      ;
 +-----------------+-----------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -655,7 +655,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 514   ; 514  ;
+; Unconstrained Input Port Paths  ; 521   ; 521  ;
 ; Unconstrained Output Ports      ; 57    ; 57   ;
 ; Unconstrained Output Port Paths ; 64    ; 64   ;
 +---------------------------------+-------+------+
@@ -833,7 +833,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 24 11:55:33 2020
+    Info: Processing started: Wed Dec 02 00:59:36 2020
 Info: Command: quartus_sta Alarm_Clock_EE271 -c Alarm_Clock_EE271
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -847,216 +847,213 @@ Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name clk clk
     Info (332105): create_clock -period 1.000 -name currentState[0] currentState[0]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
-    Info (332098): Cell: Mux0~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~0  from: datab  to: combout
     Info (332098): Cell: Mux0~1  from: datac  to: combout
-    Info (332098): Cell: Mux10~1  from: dataa  to: combout
-    Info (332098): Cell: Mux10~1  from: datab  to: combout
-    Info (332098): Cell: Mux12~0  from: datac  to: combout
-    Info (332098): Cell: Mux13~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~1  from: datad  to: combout
+    Info (332098): Cell: Mux10~1  from: datac  to: combout
+    Info (332098): Cell: Mux12~1  from: datad  to: combout
+    Info (332098): Cell: Mux13~1  from: datad  to: combout
+    Info (332098): Cell: Mux15~1  from: datac  to: combout
     Info (332098): Cell: Mux16~0  from: dataa  to: combout
     Info (332098): Cell: Mux16~1  from: datac  to: combout
     Info (332098): Cell: Mux16~1  from: datad  to: combout
     Info (332098): Cell: Mux17~0  from: dataa  to: combout
-    Info (332098): Cell: Mux17~1  from: datab  to: combout
-    Info (332098): Cell: Mux18~0  from: datab  to: combout
-    Info (332098): Cell: Mux18~1  from: datac  to: combout
+    Info (332098): Cell: Mux17~1  from: datad  to: combout
+    Info (332098): Cell: Mux18~0  from: dataa  to: combout
     Info (332098): Cell: Mux18~1  from: datad  to: combout
-    Info (332098): Cell: Mux19~0  from: dataa  to: combout
-    Info (332098): Cell: Mux19~1  from: datad  to: combout
-    Info (332098): Cell: Mux1~0  from: datac  to: combout
+    Info (332098): Cell: Mux19~0  from: datac  to: combout
+    Info (332098): Cell: Mux19~1  from: datac  to: combout
+    Info (332098): Cell: Mux1~0  from: datad  to: combout
     Info (332098): Cell: Mux1~1  from: dataa  to: combout
-    Info (332098): Cell: Mux20~0  from: datab  to: combout
+    Info (332098): Cell: Mux20~0  from: datac  to: combout
     Info (332098): Cell: Mux20~1  from: dataa  to: combout
     Info (332098): Cell: Mux20~1  from: datac  to: combout
-    Info (332098): Cell: Mux21~0  from: datab  to: combout
-    Info (332098): Cell: Mux21~1  from: datac  to: combout
-    Info (332098): Cell: Mux22~0  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: dataa  to: combout
+    Info (332098): Cell: Mux21~0  from: datac  to: combout
+    Info (332098): Cell: Mux21~1  from: dataa  to: combout
+    Info (332098): Cell: Mux22~0  from: datac  to: combout
     Info (332098): Cell: Mux22~1  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datad  to: combout
     Info (332098): Cell: Mux23~0  from: datac  to: combout
-    Info (332098): Cell: Mux23~1  from: datab  to: combout
-    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux23~1  from: dataa  to: combout
+    Info (332098): Cell: Mux2~0  from: datab  to: combout
     Info (332098): Cell: Mux2~1  from: dataa  to: combout
     Info (332098): Cell: Mux2~1  from: datac  to: combout
-    Info (332098): Cell: Mux3~0  from: datac  to: combout
-    Info (332098): Cell: Mux3~1  from: datad  to: combout
-    Info (332098): Cell: Mux4~0  from: datac  to: combout
-    Info (332098): Cell: Mux4~1  from: datac  to: combout
+    Info (332098): Cell: Mux3~0  from: datab  to: combout
+    Info (332098): Cell: Mux3~1  from: datac  to: combout
+    Info (332098): Cell: Mux4~0  from: datab  to: combout
+    Info (332098): Cell: Mux4~1  from: dataa  to: combout
     Info (332098): Cell: Mux4~1  from: datad  to: combout
-    Info (332098): Cell: Mux5~0  from: dataa  to: combout
+    Info (332098): Cell: Mux5~0  from: datab  to: combout
     Info (332098): Cell: Mux5~1  from: datab  to: combout
-    Info (332098): Cell: Mux6~0  from: datad  to: combout
-    Info (332098): Cell: Mux6~1  from: datab  to: combout
+    Info (332098): Cell: Mux6~0  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: datac  to: combout
     Info (332098): Cell: Mux6~1  from: datad  to: combout
-    Info (332098): Cell: Mux7~0  from: datad  to: combout
+    Info (332098): Cell: Mux7~0  from: datac  to: combout
     Info (332098): Cell: Mux7~1  from: datad  to: combout
-    Info (332098): Cell: WideOr80~1  from: datad  to: combout
-    Info (332098): Cell: WideOr80~2  from: datab  to: combout
+    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
+    Info (332098): Cell: WideOr80~2  from: datad  to: combout
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -11.087
+Info (332146): Worst-case setup slack is -11.603
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.087            -366.117 currentState[0] 
-    Info (332119):    -5.442            -667.524 clk 
-Info (332146): Worst-case hold slack is 0.348
+    Info (332119):   -11.603            -378.829 currentState[0] 
+    Info (332119):    -5.651            -709.361 clk 
+Info (332146): Worst-case hold slack is 0.265
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.348               0.000 clk 
-    Info (332119):     0.444               0.000 currentState[0] 
+    Info (332119):     0.265               0.000 currentState[0] 
+    Info (332119):     0.347               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -256.943 clk 
-    Info (332119):    -1.713            -218.459 currentState[0] 
+    Info (332119):    -3.000            -259.749 clk 
+    Info (332119):    -2.096            -305.593 currentState[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
-    Info (332098): Cell: Mux0~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~0  from: datab  to: combout
     Info (332098): Cell: Mux0~1  from: datac  to: combout
-    Info (332098): Cell: Mux10~1  from: dataa  to: combout
-    Info (332098): Cell: Mux10~1  from: datab  to: combout
-    Info (332098): Cell: Mux12~0  from: datac  to: combout
-    Info (332098): Cell: Mux13~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~1  from: datad  to: combout
+    Info (332098): Cell: Mux10~1  from: datac  to: combout
+    Info (332098): Cell: Mux12~1  from: datad  to: combout
+    Info (332098): Cell: Mux13~1  from: datad  to: combout
+    Info (332098): Cell: Mux15~1  from: datac  to: combout
     Info (332098): Cell: Mux16~0  from: dataa  to: combout
     Info (332098): Cell: Mux16~1  from: datac  to: combout
     Info (332098): Cell: Mux16~1  from: datad  to: combout
     Info (332098): Cell: Mux17~0  from: dataa  to: combout
-    Info (332098): Cell: Mux17~1  from: datab  to: combout
-    Info (332098): Cell: Mux18~0  from: datab  to: combout
-    Info (332098): Cell: Mux18~1  from: datac  to: combout
+    Info (332098): Cell: Mux17~1  from: datad  to: combout
+    Info (332098): Cell: Mux18~0  from: dataa  to: combout
     Info (332098): Cell: Mux18~1  from: datad  to: combout
-    Info (332098): Cell: Mux19~0  from: dataa  to: combout
-    Info (332098): Cell: Mux19~1  from: datad  to: combout
-    Info (332098): Cell: Mux1~0  from: datac  to: combout
+    Info (332098): Cell: Mux19~0  from: datac  to: combout
+    Info (332098): Cell: Mux19~1  from: datac  to: combout
+    Info (332098): Cell: Mux1~0  from: datad  to: combout
     Info (332098): Cell: Mux1~1  from: dataa  to: combout
-    Info (332098): Cell: Mux20~0  from: datab  to: combout
+    Info (332098): Cell: Mux20~0  from: datac  to: combout
     Info (332098): Cell: Mux20~1  from: dataa  to: combout
     Info (332098): Cell: Mux20~1  from: datac  to: combout
-    Info (332098): Cell: Mux21~0  from: datab  to: combout
-    Info (332098): Cell: Mux21~1  from: datac  to: combout
-    Info (332098): Cell: Mux22~0  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: dataa  to: combout
+    Info (332098): Cell: Mux21~0  from: datac  to: combout
+    Info (332098): Cell: Mux21~1  from: dataa  to: combout
+    Info (332098): Cell: Mux22~0  from: datac  to: combout
     Info (332098): Cell: Mux22~1  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datad  to: combout
     Info (332098): Cell: Mux23~0  from: datac  to: combout
-    Info (332098): Cell: Mux23~1  from: datab  to: combout
-    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux23~1  from: dataa  to: combout
+    Info (332098): Cell: Mux2~0  from: datab  to: combout
     Info (332098): Cell: Mux2~1  from: dataa  to: combout
     Info (332098): Cell: Mux2~1  from: datac  to: combout
-    Info (332098): Cell: Mux3~0  from: datac  to: combout
-    Info (332098): Cell: Mux3~1  from: datad  to: combout
-    Info (332098): Cell: Mux4~0  from: datac  to: combout
-    Info (332098): Cell: Mux4~1  from: datac  to: combout
+    Info (332098): Cell: Mux3~0  from: datab  to: combout
+    Info (332098): Cell: Mux3~1  from: datac  to: combout
+    Info (332098): Cell: Mux4~0  from: datab  to: combout
+    Info (332098): Cell: Mux4~1  from: dataa  to: combout
     Info (332098): Cell: Mux4~1  from: datad  to: combout
-    Info (332098): Cell: Mux5~0  from: dataa  to: combout
+    Info (332098): Cell: Mux5~0  from: datab  to: combout
     Info (332098): Cell: Mux5~1  from: datab  to: combout
-    Info (332098): Cell: Mux6~0  from: datad  to: combout
-    Info (332098): Cell: Mux6~1  from: datab  to: combout
+    Info (332098): Cell: Mux6~0  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: datac  to: combout
     Info (332098): Cell: Mux6~1  from: datad  to: combout
-    Info (332098): Cell: Mux7~0  from: datad  to: combout
+    Info (332098): Cell: Mux7~0  from: datac  to: combout
     Info (332098): Cell: Mux7~1  from: datad  to: combout
-    Info (332098): Cell: WideOr80~1  from: datad  to: combout
-    Info (332098): Cell: WideOr80~2  from: datab  to: combout
+    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
+    Info (332098): Cell: WideOr80~2  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -10.373
+Info (332146): Worst-case setup slack is -10.888
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -10.373            -341.419 currentState[0] 
-    Info (332119):    -4.956            -604.937 clk 
-Info (332146): Worst-case hold slack is 0.311
+    Info (332119):   -10.888            -353.262 currentState[0] 
+    Info (332119):    -5.150            -642.785 clk 
+Info (332146): Worst-case hold slack is 0.193
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
+    Info (332119):     0.193               0.000 currentState[0] 
     Info (332119):     0.311               0.000 clk 
-    Info (332119):     0.478               0.000 currentState[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -256.943 clk 
-    Info (332119):    -1.529            -189.397 currentState[0] 
+    Info (332119):    -3.000            -259.749 clk 
+    Info (332119):    -1.908            -270.697 currentState[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
-    Info (332098): Cell: Mux0~0  from: datad  to: combout
-    Info (332098): Cell: Mux0~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~0  from: datab  to: combout
     Info (332098): Cell: Mux0~1  from: datac  to: combout
-    Info (332098): Cell: Mux10~1  from: dataa  to: combout
-    Info (332098): Cell: Mux10~1  from: datab  to: combout
-    Info (332098): Cell: Mux12~0  from: datac  to: combout
-    Info (332098): Cell: Mux13~1  from: dataa  to: combout
+    Info (332098): Cell: Mux0~1  from: datad  to: combout
+    Info (332098): Cell: Mux10~1  from: datac  to: combout
+    Info (332098): Cell: Mux12~1  from: datad  to: combout
+    Info (332098): Cell: Mux13~1  from: datad  to: combout
+    Info (332098): Cell: Mux15~1  from: datac  to: combout
     Info (332098): Cell: Mux16~0  from: dataa  to: combout
     Info (332098): Cell: Mux16~1  from: datac  to: combout
     Info (332098): Cell: Mux16~1  from: datad  to: combout
     Info (332098): Cell: Mux17~0  from: dataa  to: combout
-    Info (332098): Cell: Mux17~1  from: datab  to: combout
-    Info (332098): Cell: Mux18~0  from: datab  to: combout
-    Info (332098): Cell: Mux18~1  from: datac  to: combout
+    Info (332098): Cell: Mux17~1  from: datad  to: combout
+    Info (332098): Cell: Mux18~0  from: dataa  to: combout
     Info (332098): Cell: Mux18~1  from: datad  to: combout
-    Info (332098): Cell: Mux19~0  from: dataa  to: combout
-    Info (332098): Cell: Mux19~1  from: datad  to: combout
-    Info (332098): Cell: Mux1~0  from: datac  to: combout
+    Info (332098): Cell: Mux19~0  from: datac  to: combout
+    Info (332098): Cell: Mux19~1  from: datac  to: combout
+    Info (332098): Cell: Mux1~0  from: datad  to: combout
     Info (332098): Cell: Mux1~1  from: dataa  to: combout
-    Info (332098): Cell: Mux20~0  from: datab  to: combout
+    Info (332098): Cell: Mux20~0  from: datac  to: combout
     Info (332098): Cell: Mux20~1  from: dataa  to: combout
     Info (332098): Cell: Mux20~1  from: datac  to: combout
-    Info (332098): Cell: Mux21~0  from: datab  to: combout
-    Info (332098): Cell: Mux21~1  from: datac  to: combout
-    Info (332098): Cell: Mux22~0  from: datab  to: combout
-    Info (332098): Cell: Mux22~1  from: dataa  to: combout
+    Info (332098): Cell: Mux21~0  from: datac  to: combout
+    Info (332098): Cell: Mux21~1  from: dataa  to: combout
+    Info (332098): Cell: Mux22~0  from: datac  to: combout
     Info (332098): Cell: Mux22~1  from: datac  to: combout
+    Info (332098): Cell: Mux22~1  from: datad  to: combout
     Info (332098): Cell: Mux23~0  from: datac  to: combout
-    Info (332098): Cell: Mux23~1  from: datab  to: combout
-    Info (332098): Cell: Mux2~0  from: datac  to: combout
+    Info (332098): Cell: Mux23~1  from: dataa  to: combout
+    Info (332098): Cell: Mux2~0  from: datab  to: combout
     Info (332098): Cell: Mux2~1  from: dataa  to: combout
     Info (332098): Cell: Mux2~1  from: datac  to: combout
-    Info (332098): Cell: Mux3~0  from: datac  to: combout
-    Info (332098): Cell: Mux3~1  from: datad  to: combout
-    Info (332098): Cell: Mux4~0  from: datac  to: combout
-    Info (332098): Cell: Mux4~1  from: datac  to: combout
+    Info (332098): Cell: Mux3~0  from: datab  to: combout
+    Info (332098): Cell: Mux3~1  from: datac  to: combout
+    Info (332098): Cell: Mux4~0  from: datab  to: combout
+    Info (332098): Cell: Mux4~1  from: dataa  to: combout
     Info (332098): Cell: Mux4~1  from: datad  to: combout
-    Info (332098): Cell: Mux5~0  from: dataa  to: combout
+    Info (332098): Cell: Mux5~0  from: datab  to: combout
     Info (332098): Cell: Mux5~1  from: datab  to: combout
-    Info (332098): Cell: Mux6~0  from: datad  to: combout
-    Info (332098): Cell: Mux6~1  from: datab  to: combout
+    Info (332098): Cell: Mux6~0  from: dataa  to: combout
+    Info (332098): Cell: Mux6~1  from: datac  to: combout
     Info (332098): Cell: Mux6~1  from: datad  to: combout
-    Info (332098): Cell: Mux7~0  from: datad  to: combout
+    Info (332098): Cell: Mux7~0  from: datac  to: combout
     Info (332098): Cell: Mux7~1  from: datad  to: combout
-    Info (332098): Cell: WideOr80~1  from: datad  to: combout
-    Info (332098): Cell: WideOr80~2  from: datab  to: combout
+    Info (332098): Cell: WideOr80~1  from: dataa  to: combout
+    Info (332098): Cell: WideOr80~2  from: datad  to: combout
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -4.896
+Info (332146): Worst-case setup slack is -5.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.896            -156.942 currentState[0] 
-    Info (332119):    -1.875            -193.662 clk 
-Info (332146): Worst-case hold slack is -0.017
+    Info (332119):    -5.147            -162.268 currentState[0] 
+    Info (332119):    -1.992            -209.433 clk 
+Info (332146): Worst-case hold slack is -0.058
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.017              -0.017 currentState[0] 
+    Info (332119):    -0.058              -0.100 currentState[0] 
     Info (332119):     0.152               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -187.136 clk 
-    Info (332119):    -0.563             -35.389 currentState[0] 
+    Info (332119):    -3.000            -189.321 clk 
+    Info (332119):    -0.801             -67.372 currentState[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4842 megabytes
-    Info: Processing ended: Tue Nov 24 11:55:35 2020
+    Info: Processing ended: Wed Dec 02 00:59:38 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 

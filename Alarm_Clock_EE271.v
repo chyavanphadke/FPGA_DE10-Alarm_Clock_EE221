@@ -39,6 +39,8 @@ reg [24:0]counter_pressed, counter_not_pressed;
 reg button_state = 1'b1;
 
 reg alarmflag;
+reg timerFlag;
+reg buzzerFlag;
 
 initial begin
 currentState <= 2'b0;
@@ -54,6 +56,7 @@ initial begin
   seg4 = 7'b1_11_11_11;
   seg5 = 8'b11_11_11_11;
   alarmflag = 0;
+  timerFlag = 0;
 end
 
 // Global Variables to keep count
@@ -67,7 +70,7 @@ reg [7:0] alarm_minutes = 0; // alarm initially set at 1 minute.
 
 reg [7:0] timer_hours = 0;
 reg [7:0] timer_minutes = 0;
-reg [7:0] timer_seconds = 25'd10;
+reg [7:0] timer_seconds = 25'd2;
 
 reg [7:0] stopwatch_hours = 0;
 reg [7:0] stopwatch_minutes = 0;
@@ -93,12 +96,13 @@ if(!pushBtn[1]) begin
 
 	timer_hours <= 0;
 	timer_minutes <= 0;
-	timer_seconds <= 25'd10;
+	timer_seconds <= 25'd2;
 
 	stopwatch_hours <= 0;
 	stopwatch_minutes <= 0;
 	stopwatch_seconds <= 0;
 	alarmflag = 0;
+	timerFlag = 0;
 	segDecimalPoint = 0;
 end
 
@@ -144,14 +148,16 @@ else begin
 						timer_hours <= timer_hours - 1;
 					end
 					
-				end
+					end
 				else begin
 					timer_minutes <= timer_minutes - 1;
 				end
 				
 			end
 			else begin
+			if (timer_seconds != 0) begin
 				timer_seconds <= timer_seconds - 1;
+				end
 			end
 			//...........
 			// Stopwatch
@@ -186,9 +192,14 @@ else begin
 		else begin
 			count <= count + 1;
 			if(count > 26'b01011111010111100001000000) begin
-				segDecimalPoint <= 1; end
+				segDecimalPoint <= 1;
+				if ((buzzerFlag && alarmflag) || (buzzerFlag && timerFlag)) begin
+					buzzer <= 1;
+				end 
+				end
 			else begin
 				segDecimalPoint <= 0;
+				buzzer <= 0;
 			end
 		end
 	end
@@ -244,6 +255,7 @@ else begin
 					end
 					else begin
 						timer_hours <= timer_hours + 1;
+						timerFlag <= 1;
 					end
             end
             else if(switches[0] == 1 && switches[1] == 0) begin
@@ -252,6 +264,7 @@ else begin
 					end
 					else begin
 						timer_minutes <= timer_minutes + 1;
+						timerFlag <= 1;
 					end
             end
     end
@@ -314,14 +327,14 @@ end
 
 
 always @ (posedge clk) begin
-		if((hours == alarm_hours) && (minutes == alarm_minutes) && (alarmflag == 1)) begin
+		if((hours == alarm_hours) && (minutes == alarm_minutes) && (alarmflag == 1) || (0 == timer_minutes) && (0 == timer_seconds) && (timerFlag == 1)) begin
 			led = 10'b1111111111;
-			buzzer = 1;
+			buzzerFlag <= 1;
 		end
 		else begin
 			led = 10'b0000000000;
-			buzzer = 0; 
-	end	
+			buzzerFlag <= 0; 
+		end
 end
 
 always @ (currentState) begin
